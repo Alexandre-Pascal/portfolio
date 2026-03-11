@@ -130,6 +130,18 @@ const dataFr: PortfolioData = {
   ],
   experience: [
     {
+      role: "Associé & Cofondateur",
+      company: "Snowledge",
+      startDate: "Janvier 2025",
+      endDate: "Aujourd'hui",
+      type: "Startup",
+      points: [
+        "Plateforme d'analyse de contenu multi-plateforme pilotée par l'IA (Discord, YouTube, WhatsApp).",
+        "Architecture backend plateforme-agnostique, collecte unifiée, analyses LLM (digests, tendances), Stripe, RBAC, déploiement GCP.",
+        "~1 630 commits sur main en un an — stack : NestJS, Next.js 15, PostgreSQL, MongoDB, Cloud Run.",
+      ],
+    },
+    {
       role: "Stagiaire développeur",
       company: "Centre Hospitalier Jean Rougier",
       city: "Cahors",
@@ -156,6 +168,31 @@ const dataFr: PortfolioData = {
     },
   ],
   projects: [
+    {
+      slug: "snowledge",
+      name: "Snowledge",
+      description:
+        "Associé & cofondateur depuis janvier 2025. Plateforme d'analyse de contenu multi-plateforme pilotée par l'IA : collecte Discord, YouTube, WhatsApp → stockage unifié → analyses LLM (synthèses, tendances, digests) → tableaux de bord et abonnements Stripe.",
+      longDescription:
+        "Snowledge est la startup que je cofonde depuis janvier 2025 (création officielle mars 2025). Plateforme SaaS permettant de collecter les contenus générés sur plusieurs canaux (Discord, YouTube, WhatsApp), de les normaliser et les stocker de façon unifiée, puis de les analyser via des modèles de langage (LLM) pour produire des synthèses, tendances, digests et analyses thématiques. Gestion des communautés, abonnements (Stripe), droits d'accès (RBAC), déploiement sur GCP (Cloud Run). En un an : architecture backend plateforme-agnostique, intégration des trois plateformes, pipeline d'analyse IA (OVH), ETL et vectorisation (pgvector), CI/CD et observabilité. Voir la page détail pour le déroulé complet.",
+      technologies: [
+        "NestJS",
+        "Next.js 15",
+        "TypeScript",
+        "PostgreSQL",
+        "MongoDB",
+        "Stripe",
+        "Google Cloud (Cloud Run, Cloud Build)",
+        "Discord API",
+        "YouTube Data API",
+        "WhatsApp (Evolution API)",
+        "LLM (OVH AI)",
+        "Socket.io",
+        "i18n",
+      ],
+      categories: ["web-app"],
+      liveUrl: "https://app.snowledge.eu",
+    },
     {
       slug: "intranet-ch-cahors",
       name: "Intranet CH Cahors",
@@ -552,6 +589,18 @@ const dataEn: PortfolioData = {
   ],
   experience: [
     {
+      role: "Associate & Co-founder",
+      company: "Snowledge",
+      startDate: "January 2025",
+      endDate: "Present",
+      type: "Startup",
+      points: [
+        "AI-driven multi-platform content analysis platform (Discord, YouTube, WhatsApp).",
+        "Platform-agnostic backend architecture, unified collection, LLM analyses (digests, trends), Stripe, RBAC, GCP deployment.",
+        "~1,630 commits on main in one year — stack: NestJS, Next.js 15, PostgreSQL, MongoDB, Cloud Run.",
+      ],
+    },
+    {
       role: "Developer Intern",
       company: "Centre Hospitalier Jean Rougier",
       city: "Cahors",
@@ -578,6 +627,31 @@ const dataEn: PortfolioData = {
     },
   ],
   projects: [
+    {
+      slug: "snowledge",
+      name: "Snowledge",
+      description:
+        "Associate & co-founder since January 2025. AI-driven multi-platform content analysis platform: Discord, YouTube, WhatsApp collection → unified storage → LLM analyses (summaries, trends, digests) → dashboards and Stripe subscriptions.",
+      longDescription:
+        "Snowledge is the startup I co-founded in January 2025 (officially created March 2025). SaaS platform that collects content from multiple channels (Discord, YouTube, WhatsApp), normalises and stores it in a unified way, then analyses it via language models (LLM) to produce summaries, trends, digests and thematic analyses. Community management, subscriptions (Stripe), access control (RBAC), deployment on GCP (Cloud Run). In one year: platform-agnostic backend architecture, integration of all three platforms, AI analysis pipeline (OVH), ETL and vectorisation (pgvector), CI/CD and observability. See the detail page for the full timeline.",
+      technologies: [
+        "NestJS",
+        "Next.js 15",
+        "TypeScript",
+        "PostgreSQL",
+        "MongoDB",
+        "Stripe",
+        "Google Cloud (Cloud Run, Cloud Build)",
+        "Discord API",
+        "YouTube Data API",
+        "WhatsApp (Evolution API)",
+        "LLM (OVH AI)",
+        "Socket.io",
+        "i18n",
+      ],
+      categories: ["web-app"],
+      liveUrl: "https://app.snowledge.eu",
+    },
     {
       slug: "intranet-ch-cahors",
       name: "Intranet CH Cahors",
@@ -933,8 +1007,9 @@ const dataEn: PortfolioData = {
 
 export type DataLocale = "fr" | "en";
 
-/** Ordre d'affichage des projets (1 = Ladorée, 2 = Valpineta, 3 = Intranet, …) */
+/** Ordre d'affichage des projets (1 = Snowledge, 2 = Ladorée, …) */
 const PROJECT_DISPLAY_ORDER: string[] = [
+  "snowledge",
   "ladoree-web3",
   "valpineta",
   "intranet-ch-cahors",

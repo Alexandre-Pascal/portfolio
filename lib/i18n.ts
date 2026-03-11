@@ -39,6 +39,12 @@ export const ui = {
     projectDetail: {
       backToProjects: "Retour aux projets",
       viewProject: "Voir le projet",
+      snowledge: {
+        keyFigures: "Chiffres clés",
+        timeline: "Évolution du projet",
+        myContributions: "Ce que j'ai réalisé",
+        stack: "Stack technique",
+      },
       sourceCode: "Code source",
       reportPdf: "Rapport de stage (PDF)",
       technologies: "Technologies",
@@ -95,6 +101,12 @@ export const ui = {
     projectDetail: {
       backToProjects: "Back to projects",
       viewProject: "View project",
+      snowledge: {
+        keyFigures: "Key figures",
+        timeline: "Project timeline",
+        myContributions: "What I delivered",
+        stack: "Tech stack",
+      },
       sourceCode: "Source code",
       reportPdf: "Internship report (PDF)",
       technologies: "Technologies",

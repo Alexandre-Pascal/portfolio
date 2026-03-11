@@ -7,6 +7,7 @@ import { useLocale } from "@/context/LocaleContext";
 import { getProjectBySlug } from "@/lib/data";
 import { getUi } from "@/lib/i18n";
 import YouTubeEmbed from "@/components/YouTubeEmbed";
+import { ProjectSnowledgeDetail } from "@/components/ProjectSnowledgeDetail";
 import { useEffect } from "react";
 
 export default function ProjectDetailPage() {
@@ -21,6 +22,10 @@ export default function ProjectDetailPage() {
       document.title = `${project.name} | Portfolio`;
     }
   }, [project]);
+
+  if (project?.slug === "snowledge") {
+    return <ProjectSnowledgeDetail project={project} />;
+  }
 
   if (!project) {
     return (
