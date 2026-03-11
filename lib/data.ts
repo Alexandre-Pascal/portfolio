@@ -306,6 +306,10 @@ const dataFr: PortfolioData = {
         "TypeScript",
       ],
       repoUrl: "https://github.com/Alexandre-Pascal/arbirange",
+      image: "/images/projects/arbirange/arbirange-01.png",
+      gallery: [
+        { src: "/images/projects/arbirange/arbirange-01.png", caption: "Le dashboard pourrait ressembler à quelque chose comme ça (ex. ArbiRange Vault)." },
+      ],
     },
     {
       slug: "liquidity-farming-tracker",
@@ -382,9 +386,9 @@ const dataFr: PortfolioData = {
       slug: "crypto-chart-bot-discord",
       name: "Crypto Chart Bot (Discord)",
       description:
-        "Bot Discord pour générer des graphiques de prix crypto (Binance API). Commandes /chart, /chart_btc, /chart_eth, /chart_sol. Déployé sur Render.",
+        "Bot Discord pour générer des graphiques de prix crypto (Binance API). Commandes /chart, /chart_btc, /chart_eth, /chart_sol. Hébergé sur Koyeb (app.koyeb.com).",
       longDescription:
-        "Bot Discord qui génère des graphiques de prix pour différentes cryptomonnaies en utilisant l'API Binance. Fournit des graphiques pour Bitcoin, Ethereum, Solana et d'autres paires selon les commandes.\n\nCommandes slash : /chart (options : crypto ex. BTCUSDT, intervalle ex. 1h/1d, limite) ; /chart_btc, /chart_eth, /chart_sol — graphiques sur 1 an, daily. Chaque commande affiche aussi le prix actuel de la crypto. Exemple : /chart crypto:BTCUSDT interval:1d limit:365.\n\nDépendances : discord.js (interactions Discord), axios (requêtes API Binance), canvas (création des graphiques). Déploiement : Render (service web, variables d'environnement BOT_TOKEN). Un lien d'invitation permet d'ajouter le bot à n'importe quel serveur Discord. Un fichier GUIDE.md détaille l'installation et la configuration (Discord Developer Portal, permissions, déploiement local).",
+        "Bot Discord (CryptoChart APP) qui génère des graphiques de prix en temps réel pour plusieurs cryptomonnaies en s'appuyant sur l'API Binance. Idéal pour visualiser les tendances de marché directement dans un serveur Discord.\n\nFonctionnalités : commandes slash /chart (paramètres personnalisables : symbole ex. BTCUSDT, intervalle 1h/1d, limite de données), /chart_btc, /chart_eth, /chart_sol — graphiques sur 1 an (daily) pour Bitcoin, Ethereum et Solana. Chaque commande affiche le prix actuel de la crypto ainsi que le graphique. Exemple : /chart crypto:BTCUSDT interval:1d limit:365.\n\nStack : Node.js, discord.js (interactions et slash commands), axios (requêtes HTTP vers Binance), canvas (génération des graphiques). Hébergement : Koyeb (app.koyeb.com) ; possible aussi en local. Un lien d'invitation OAuth2 permet à quiconque d'ajouter le bot à son serveur Discord.",
       technologies: [
         "JavaScript",
         "Discord.js",
@@ -393,6 +397,14 @@ const dataFr: PortfolioData = {
         "API Binance",
       ],
       repoUrl: "https://github.com/Alexandre-Pascal/CryptoChartBot-Discord",
+      image: "/images/projects/crypto-chart-bot-discord/crypto-chart-01.png",
+      gallery: [
+        { src: "/images/projects/crypto-chart-bot-discord/crypto-chart-01.png", caption: "Identité visuelle du bot (avatar)" },
+        { src: "/images/projects/crypto-chart-bot-discord/crypto-chart-02.png", caption: "Commande /chart_btc — prix actuel et graphique Bitcoin" },
+        { src: "/images/projects/crypto-chart-bot-discord/crypto-chart-03.png", caption: "Réponse du bot avec graphique BTCUSDT" },
+        { src: "/images/projects/crypto-chart-bot-discord/crypto-chart-04.png", caption: "Graphique 1 an (daily) et liste des commandes" },
+        { src: "/images/projects/crypto-chart-bot-discord/crypto-chart-05.png", caption: "Profil du bot et lien d'ajout au serveur" },
+      ],
     },
     {
       slug: "interface-web-edicad",
@@ -713,6 +725,10 @@ const dataEn: PortfolioData = {
         "TypeScript",
       ],
       repoUrl: "https://github.com/Alexandre-Pascal/arbirange",
+      image: "/images/projects/arbirange/arbirange-01.png",
+      gallery: [
+        { src: "/images/projects/arbirange/arbirange-01.png", caption: "The dashboard might look something like this (e.g. ArbiRange Vault)." },
+      ],
     },
     {
       slug: "liquidity-farming-tracker",
@@ -785,9 +801,9 @@ const dataEn: PortfolioData = {
       slug: "crypto-chart-bot-discord",
       name: "Crypto Chart Bot (Discord)",
       description:
-        "Discord bot to generate crypto price charts (Binance API). Commands /chart, /chart_btc, /chart_eth, /chart_sol. Deployed on Render.",
+        "Discord bot to generate crypto price charts (Binance API). Commands /chart, /chart_btc, /chart_eth, /chart_sol. Hosted on Koyeb (app.koyeb.com).",
       longDescription:
-        "Discord bot that generates price charts for various cryptocurrencies using the Binance API. Provides charts for Bitcoin, Ethereum, Solana and other pairs depending on commands.\n\nSlash commands: /chart (options: crypto e.g. BTCUSDT, interval e.g. 1h/1d, limit); /chart_btc, /chart_eth, /chart_sol — charts over 1 year, daily. Each command also displays the current price of the crypto. Example: /chart crypto:BTCUSDT interval:1d limit:365.\n\nDependencies: discord.js (Discord interactions), axios (Binance API requests), canvas (chart creation). Deployment: Render (web service, BOT_TOKEN environment variable). An invite link allows adding the bot to any Discord server. A GUIDE.md file details installation and configuration (Discord Developer Portal, permissions, local deployment).",
+        "Discord bot (CryptoChart APP) that generates real-time price charts for several cryptocurrencies using the Binance API. Designed to visualize market trends directly inside a Discord server.\n\nFeatures: slash commands /chart (custom options: symbol e.g. BTCUSDT, interval 1h/1d, data limit), /chart_btc, /chart_eth, /chart_sol — 1-year (daily) charts for Bitcoin, Ethereum, and Solana. Each command returns the current crypto price plus the chart. Example: /chart crypto:BTCUSDT interval:1d limit:365.\n\nStack: Node.js, discord.js (interactions and slash commands), axios (HTTP requests to Binance), canvas (chart generation). Hosting: Koyeb (app.koyeb.com); local deployment also possible. An OAuth2 invite link lets anyone add the bot to their Discord server.",
       technologies: [
         "JavaScript",
         "Discord.js",
@@ -796,6 +812,14 @@ const dataEn: PortfolioData = {
         "Binance API",
       ],
       repoUrl: "https://github.com/Alexandre-Pascal/CryptoChartBot-Discord",
+      image: "/images/projects/crypto-chart-bot-discord/crypto-chart-01.png",
+      gallery: [
+        { src: "/images/projects/crypto-chart-bot-discord/crypto-chart-01.png", caption: "Bot visual identity (avatar)" },
+        { src: "/images/projects/crypto-chart-bot-discord/crypto-chart-02.png", caption: "Command /chart_btc — current price and Bitcoin chart" },
+        { src: "/images/projects/crypto-chart-bot-discord/crypto-chart-03.png", caption: "Bot response with BTCUSDT chart" },
+        { src: "/images/projects/crypto-chart-bot-discord/crypto-chart-04.png", caption: "1-year (daily) chart and command list" },
+        { src: "/images/projects/crypto-chart-bot-discord/crypto-chart-05.png", caption: "Bot profile and server invite link" },
+      ],
     },
     {
       slug: "interface-web-edicad",
