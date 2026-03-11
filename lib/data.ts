@@ -79,7 +79,9 @@ export interface CertificationItem {
   name: string;
   issuer: string;
   year: number;
+  period?: string; // ex. "Octobre 2024 – Janvier 2025"
   url?: string;
+  pdfUrl?: string;
 }
 
 export interface ContactInfo {
@@ -149,7 +151,7 @@ const dataFr: PortfolioData = {
       points: [
         "Plateforme d'analyse de contenu multi-plateforme pilotée par l'IA (Discord, YouTube, WhatsApp).",
         "Architecture backend plateforme-agnostique, collecte unifiée, analyses LLM (digests, tendances), Stripe, RBAC, déploiement GCP.",
-        "~1 630 commits sur main en un an — stack : NestJS, Next.js 15, PostgreSQL, MongoDB, Cloud Run.",
+        "Stack : NestJS, Next.js 15, PostgreSQL, MongoDB, Cloud Run.",
       ],
     },
     {
@@ -584,28 +586,38 @@ const dataFr: PortfolioData = {
     {
       name: "Langages & blockchain",
       items: [
-        { name: "Solidity", level: "En formation" },
-        { name: "JavaScript", level: "Intermédiaire" },
-        { name: "C#", level: "Intermédiaire" },
-        { name: "C++", level: "Intermédiaire" },
-        { name: "SQL", level: "Intermédiaire" },
+        { name: "Solidity" },
+        { name: "JavaScript" },
+        { name: "C#" },
+        { name: "C++" },
+        { name: "SQL" },
       ],
     },
     {
       name: "Frameworks & outils web",
       items: [
-        { name: "Next.js", level: "Intermédiaire" },
-        { name: "React", level: "Intermédiaire" },
-        { name: "Blazor", level: "Intermédiaire" },
-        { name: ".NET 7", level: "Intermédiaire" },
-        { name: "HTML / CSS", level: "Intermédiaire" },
+        { name: "Next.js" },
+        { name: "Node.js" },
+        { name: "NestJS" },
+        { name: "React" },
+        { name: ".NET 7" },
+        { name: "HTML / CSS" },
       ],
     },
     {
       name: "Bases de données & serveur",
       items: [
-        { name: "PostgreSQL", level: "Intermédiaire" },
-        { name: "IIS", level: "Intermédiaire" },
+        { name: "PostgreSQL" },
+        { name: "MongoDB" },
+        { name: "IIS" },
+      ],
+    },
+    {
+      name: "Cloud & hébergement",
+      items: [
+        { name: "Google Cloud Platform" },
+        { name: "OVH" },
+        { name: "Gestion de serveur non managé" },
       ],
     },
     {
@@ -621,8 +633,8 @@ const dataFr: PortfolioData = {
     {
       name: "Langues",
       items: [
-        { name: "Anglais", level: "Courant" },
-        { name: "Espagnol", level: "Intermédiaire" },
+        { name: "Anglais" },
+        { name: "Espagnol" },
       ],
     },
   ],
@@ -631,16 +643,15 @@ const dataFr: PortfolioData = {
       name: "RS6515 — Développer une application décentralisée avec les technologies blockchain",
       issuer: "Alyra (France Compétences)",
       year: 2025,
+      period: "Octobre 2024 – Janvier 2025",
       url: "https://certificate.alyra.fr/check/86E51E2C872253705AE60A4512BA2068DCECBD80ECB4D017CCF1ECDBA15C50B5RFFUWDVFNU9UV0dNZUt6cW9VSDIrQmovRWRYZDBIMW94c1ZnWjAra2tsNlNUU3dm",
+      pdfUrl: "/certificat-alyra.pdf",
     },
   ],
   contact: {
     email: "alexandre.pascal.ep@gmail.com",
     linkedin: "https://www.linkedin.com/in/alexandre-pascal-69a63524b/",
     github: "https://github.com/Alexandre-Pascal",
-    otherLinks: [
-      { label: "Certificat Alyra (PDF)", url: "/certificat-alyra.pdf" },
-    ],
   },
 };
 
@@ -1117,28 +1128,38 @@ const dataEn: PortfolioData = {
     {
       name: "Languages & blockchain",
       items: [
-        { name: "Solidity", level: "In training" },
-        { name: "JavaScript", level: "Intermediate" },
-        { name: "C#", level: "Intermediate" },
-        { name: "C++", level: "Intermediate" },
-        { name: "SQL", level: "Intermediate" },
+        { name: "Solidity" },
+        { name: "JavaScript" },
+        { name: "C#" },
+        { name: "C++" },
+        { name: "SQL" },
       ],
     },
     {
       name: "Frameworks & web tools",
       items: [
-        { name: "Next.js", level: "Intermediate" },
-        { name: "React", level: "Intermediate" },
-        { name: "Blazor", level: "Intermediate" },
-        { name: ".NET 7", level: "Intermediate" },
-        { name: "HTML / CSS", level: "Intermediate" },
+        { name: "Next.js" },
+        { name: "Node.js" },
+        { name: "NestJS" },
+        { name: "React" },
+        { name: ".NET 7" },
+        { name: "HTML / CSS" },
       ],
     },
     {
       name: "Databases & server",
       items: [
-        { name: "PostgreSQL", level: "Intermediate" },
-        { name: "IIS", level: "Intermediate" },
+        { name: "PostgreSQL" },
+        { name: "MongoDB" },
+        { name: "IIS" },
+      ],
+    },
+    {
+      name: "Cloud & hosting",
+      items: [
+        { name: "Google Cloud Platform" },
+        { name: "OVH" },
+        { name: "Unmanaged server management" },
       ],
     },
     {
@@ -1154,8 +1175,8 @@ const dataEn: PortfolioData = {
     {
       name: "Languages",
       items: [
-        { name: "English", level: "Fluent" },
-        { name: "Spanish", level: "Intermediate" },
+        { name: "English" },
+        { name: "Spanish" },
       ],
     },
   ],
@@ -1164,16 +1185,15 @@ const dataEn: PortfolioData = {
       name: "RS6515 — Develop a decentralised application with blockchain technologies",
       issuer: "Alyra (France Compétences)",
       year: 2025,
+      period: "October 2024 – January 2025",
       url: "https://certificate.alyra.fr/check/86E51E2C872253705AE60A4512BA2068DCECBD80ECB4D017CCF1ECDBA15C50B5RFFUWDVFNU9UV0dNZUt6cW9VSDIrQmovRWRYZDBIMW94c1ZnWjAra2tsNlNUU3dm",
+      pdfUrl: "/certificat-alyra.pdf",
     },
   ],
   contact: {
     email: "alexandre.pascal.ep@gmail.com",
     linkedin: "https://www.linkedin.com/in/alexandre-pascal-69a63524b/",
     github: "https://github.com/Alexandre-Pascal",
-    otherLinks: [
-      { label: "Alyra Certificate (PDF)", url: "/certificat-alyra.pdf" },
-    ],
   },
 };
 
@@ -1223,10 +1243,10 @@ export const sectionIds = [
   "hero",
   "about",
   "education",
+  "certifications",
   "experience",
   "projects",
   "skills",
-  "certifications",
   "contact",
 ] as const;
 

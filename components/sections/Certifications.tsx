@@ -51,26 +51,36 @@ export function Certifications() {
         >
           {certifications.map((cert) => (
             <motion.li key={`${cert.name}-${cert.year}`} variants={item}>
-              {cert.url ? (
-                <a
-                  href={cert.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block rounded-xl border border-border bg-background-card/50 px-6 py-4 transition-all hover:border-accent/40 hover:shadow-lg hover:shadow-accent/5"
-                >
-                  <span className="font-medium text-foreground">{cert.name}</span>
-                  <span className="mt-1 block text-sm text-foreground-muted">
-                    {cert.issuer} · {cert.year}
-                  </span>
-                </a>
-              ) : (
-                <div className="block rounded-xl border border-border bg-background-card/50 px-6 py-4 transition-all hover:border-accent/30">
-                  <span className="font-medium text-foreground">{cert.name}</span>
-                  <span className="mt-1 block text-sm text-foreground-muted">
-                    {cert.issuer} · {cert.year}
-                  </span>
-                </div>
-              )}
+              <div className="block rounded-xl border border-border bg-background-card/50 px-6 py-4 transition-all hover:border-accent/40 hover:shadow-lg hover:shadow-accent/5">
+                {cert.url ? (
+                  <a
+                    href={cert.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <span className="font-medium text-foreground">{cert.name}</span>
+                    <span className="mt-1 block text-sm text-foreground-muted">
+                      {cert.issuer} · {cert.period ?? cert.year}
+                    </span>
+                  </a>
+                ) : (
+                  <>
+                    <span className="font-medium text-foreground">{cert.name}</span>
+                    <span className="mt-1 block text-sm text-foreground-muted">
+                      {cert.issuer} · {cert.period ?? cert.year}
+                    </span>
+                  </>
+                )}
+                {cert.pdfUrl && (
+                  <a
+                    href={cert.pdfUrl}
+                    className="mt-2 inline-block text-sm font-medium text-accent hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                  >
+                    {t.sections.certificationPdfLink} ↗
+                  </a>
+                )}
+              </div>
             </motion.li>
           ))}
         </motion.ul>

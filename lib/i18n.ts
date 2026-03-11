@@ -23,6 +23,7 @@ export const ui = {
       projects: "Projets",
       skills: "Compétences",
       certifications: "Certifications",
+      certificationPdfLink: "Certificat (PDF)",
       contact: "Contact",
     },
     projectCategories: {
@@ -85,6 +86,7 @@ export const ui = {
       projects: "Projects",
       skills: "Skills",
       certifications: "Certifications",
+      certificationPdfLink: "Certificate (PDF)",
       contact: "Contact",
     },
     projectCategories: {

@@ -13,10 +13,10 @@ export default function Home() {
       <Hero />
       <About />
       <Education />
+      <Certifications />
       <Experience />
       <Projects />
       <Skills />
-      <Certifications />
       <Contact />
     </>
   );

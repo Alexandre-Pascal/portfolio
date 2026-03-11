@@ -7,10 +7,10 @@ const sectionIds: SectionId[] = [
   "hero",
   "about",
   "education",
+  "certifications",
   "experience",
   "projects",
   "skills",
-  "certifications",
   "contact",
 ];
 
