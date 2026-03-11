@@ -28,6 +28,17 @@ export const ui = {
     contact: {
       intro: "Une question ou un projet ? N'hésitez pas à me contacter.",
     },
+    projectDetail: {
+      backToProjects: "Retour aux projets",
+      viewProject: "Voir le projet",
+      sourceCode: "Code source",
+      reportPdf: "Rapport de stage (PDF)",
+      technologies: "Technologies",
+      detail: "Détail du projet",
+      gallery: "Galerie",
+      demoVideo: "Vidéo de démonstration",
+      playbackRateDefault: "Vitesse de lecture réglée à {rate}× par défaut.",
+    },
     footer: {
       rights: "Tous droits réservés",
       contact: "Contact",
@@ -64,6 +75,17 @@ export const ui = {
     },
     contact: {
       intro: "Have a question or a project? Feel free to get in touch.",
+    },
+    projectDetail: {
+      backToProjects: "Back to projects",
+      viewProject: "View project",
+      sourceCode: "Source code",
+      reportPdf: "Internship report (PDF)",
+      technologies: "Technologies",
+      detail: "Project detail",
+      gallery: "Gallery",
+      demoVideo: "Demo video",
+      playbackRateDefault: "Playback speed set to {rate}× by default.",
     },
     footer: {
       rights: "All rights reserved",
