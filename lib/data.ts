@@ -397,6 +397,7 @@ const dataFr: PortfolioData = {
         "API Binance",
       ],
       repoUrl: "https://github.com/Alexandre-Pascal/CryptoChartBot-Discord",
+      liveUrl: "https://discord.com/oauth2/authorize?client_id=1301243281883009145&permissions=2147584000&integration_type=0&scope=bot",
       image: "/images/projects/crypto-chart-bot-discord/crypto-chart-01.png",
       gallery: [
         { src: "/images/projects/crypto-chart-bot-discord/crypto-chart-01.png", caption: "Identité visuelle du bot (avatar)" },
@@ -812,6 +813,7 @@ const dataEn: PortfolioData = {
         "Binance API",
       ],
       repoUrl: "https://github.com/Alexandre-Pascal/CryptoChartBot-Discord",
+      liveUrl: "https://discord.com/oauth2/authorize?client_id=1301243281883009145&permissions=2147584000&integration_type=0&scope=bot",
       image: "/images/projects/crypto-chart-bot-discord/crypto-chart-01.png",
       gallery: [
         { src: "/images/projects/crypto-chart-bot-discord/crypto-chart-01.png", caption: "Bot visual identity (avatar)" },
