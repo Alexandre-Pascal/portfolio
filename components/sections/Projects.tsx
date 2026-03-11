@@ -1,10 +1,11 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useLocale } from "@/context/LocaleContext";
-import { getPortfolioData } from "@/lib/data";
+import { getPortfolioData, PROJECT_CATEGORIES, type ProjectCategory } from "@/lib/data";
 import { getUi } from "@/lib/i18n";
 
 const container = {
@@ -25,6 +26,20 @@ export function Projects() {
   const data = getPortfolioData(locale);
   const t = getUi(locale);
   const { projects } = data;
+  const [activeFilters, setActiveFilters] = useState<ProjectCategory[]>([]);
+
+  const toggleFilter = (cat: ProjectCategory) => {
+    setActiveFilters((prev) =>
+      prev.includes(cat) ? prev.filter((c) => c !== cat) : [...prev, cat]
+    );
+  };
+
+  const filteredProjects =
+    activeFilters.length === 0
+      ? projects
+      : projects.filter((p) =>
+          p.categories?.some((c) => activeFilters.includes(c))
+        );
 
   const viewProjectLabel = locale === "fr" ? "Voir le projet →" : "View project →";
   const sourceLabel = locale === "fr" ? "Code source" : "Source code";
@@ -46,13 +61,46 @@ export function Projects() {
         </motion.h2>
 
         <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-40px" }}
+          className="mt-6 flex flex-wrap gap-2"
+        >
+          <button
+            type="button"
+            onClick={() => setActiveFilters([])}
+            className={`rounded-lg px-4 py-2 text-sm font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background ${
+              activeFilters.length === 0
+                ? "bg-accent text-background"
+                : "bg-background-secondary text-foreground-muted hover:bg-border hover:text-foreground"
+            }`}
+          >
+            {t.projectCategories.all}
+          </button>
+          {PROJECT_CATEGORIES.map((cat) => (
+            <button
+              key={cat}
+              type="button"
+              onClick={() => toggleFilter(cat)}
+              className={`rounded-lg px-4 py-2 text-sm font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background ${
+                activeFilters.includes(cat)
+                  ? "bg-accent text-background"
+                  : "bg-background-secondary text-foreground-muted hover:bg-border hover:text-foreground"
+              }`}
+            >
+              {t.projectCategories[cat]}
+            </button>
+          ))}
+        </motion.div>
+
+        <motion.div
+          key={activeFilters.slice().sort().join(",")}
           variants={container}
           initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: "-60px" }}
+          animate="show"
           className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3"
         >
-          {projects.map((project) => (
+          {filteredProjects.map((project) => (
             <motion.article
               key={project.slug}
               variants={card}

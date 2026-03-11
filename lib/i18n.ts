@@ -25,6 +25,14 @@ export const ui = {
       certifications: "Certifications",
       contact: "Contact",
     },
+    projectCategories: {
+      all: "Tous",
+      web3: "WEB3",
+      mobile: "Mobile",
+      "web-app": "Web App",
+      "discord-bot": "Discord Bot",
+      "local-app": "Locale App",
+    },
     contact: {
       intro: "Une question ou un projet ? N'hésitez pas à me contacter.",
     },
@@ -72,6 +80,14 @@ export const ui = {
       skills: "Skills",
       certifications: "Certifications",
       contact: "Contact",
+    },
+    projectCategories: {
+      all: "All",
+      web3: "WEB3",
+      mobile: "Mobile",
+      "web-app": "Web App",
+      "discord-bot": "Discord Bot",
+      "local-app": "Local App",
     },
     contact: {
       intro: "Have a question or a project? Feel free to get in touch.",
