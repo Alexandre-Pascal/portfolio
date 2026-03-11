@@ -40,7 +40,7 @@ export function Footer() {
               </a>
             )}
             <Link
-              href="#contact"
+              href="/#contact"
               className="text-sm font-medium text-foreground-muted transition-colors hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
               {t.footer.contact}

@@ -55,9 +55,20 @@ export interface ProjectItem {
   categories?: ProjectCategory[]; // Filtre : web3, mobile, web-app, discord-bot, local-app
 }
 
-export type ProjectCategory = "web3" | "mobile" | "web-app" | "discord-bot" | "local-app";
+export type ProjectCategory =
+  | "web3"
+  | "mobile"
+  | "web-app"
+  | "discord-bot"
+  | "local-app";
 
-export const PROJECT_CATEGORIES: ProjectCategory[] = ["web3", "mobile", "web-app", "discord-bot", "local-app"];
+export const PROJECT_CATEGORIES: ProjectCategory[] = [
+  "web3",
+  "mobile",
+  "web-app",
+  "discord-bot",
+  "local-app",
+];
 
 export interface SkillCategory {
   name: string;
@@ -192,6 +203,46 @@ const dataFr: PortfolioData = {
       ],
       categories: ["web-app"],
       liveUrl: "https://app.snowledge.eu",
+      image: "/images/projects/snowledge/snowledge-01.png",
+      gallery: [
+        {
+          src: "/images/projects/snowledge/snowledge-01.png",
+          caption: "Vue d'ensemble — Statistiques et aperçu général",
+        },
+        {
+          src: "/images/projects/snowledge/snowledge-02.png",
+          caption: "Résultat d'analyse — Synthèse et recommandations",
+        },
+        {
+          src: "/images/projects/snowledge/snowledge-03.png",
+          caption: "Studio d'analyse — Création et historique",
+        },
+        {
+          src: "/images/projects/snowledge/snowledge-04.png",
+          caption: "To-do list — Kanban",
+        },
+        {
+          src: "/images/projects/snowledge/snowledge-05.png",
+          caption: "Overview — Statistiques et sujets à explorer",
+        },
+        {
+          src: "/images/projects/snowledge/snowledge-06.png",
+          caption: "Dernières analyses — Liste et sous-résultats",
+        },
+        {
+          src: "/images/projects/snowledge/snowledge-07.png",
+          caption: "Admin — Inscrits et chiffres clés",
+        },
+        {
+          src: "/images/projects/snowledge/snowledge-08.png",
+          caption: "Configuration du plan communauté — Type de communauté",
+        },
+        {
+          src: "/images/projects/snowledge/snowledge-10.png",
+          caption:
+            "Mes statistiques — KPIs, dynamique communautaire, répartition par plateforme",
+        },
+      ],
     },
     {
       slug: "intranet-ch-cahors",
@@ -354,7 +405,11 @@ const dataFr: PortfolioData = {
       repoUrl: "https://github.com/Alexandre-Pascal/arbirange",
       image: "/images/projects/arbirange/arbirange-01.png",
       gallery: [
-        { src: "/images/projects/arbirange/arbirange-01.png", caption: "Le dashboard pourrait ressembler à quelque chose comme ça (ex. ArbiRange Vault)." },
+        {
+          src: "/images/projects/arbirange/arbirange-01.png",
+          caption:
+            "Le dashboard pourrait ressembler à quelque chose comme ça (ex. ArbiRange Vault).",
+        },
       ],
     },
     {
@@ -446,14 +501,30 @@ const dataFr: PortfolioData = {
       ],
       categories: ["discord-bot"],
       repoUrl: "https://github.com/Alexandre-Pascal/CryptoChartBot-Discord",
-      liveUrl: "https://discord.com/oauth2/authorize?client_id=1301243281883009145&permissions=2147584000&integration_type=0&scope=bot",
+      liveUrl:
+        "https://discord.com/oauth2/authorize?client_id=1301243281883009145&permissions=2147584000&integration_type=0&scope=bot",
       image: "/images/projects/crypto-chart-bot-discord/crypto-chart-01.png",
       gallery: [
-        { src: "/images/projects/crypto-chart-bot-discord/crypto-chart-01.png", caption: "Identité visuelle du bot (avatar)" },
-        { src: "/images/projects/crypto-chart-bot-discord/crypto-chart-02.png", caption: "Commande /chart_btc — prix actuel et graphique Bitcoin" },
-        { src: "/images/projects/crypto-chart-bot-discord/crypto-chart-03.png", caption: "Réponse du bot avec graphique BTCUSDT" },
-        { src: "/images/projects/crypto-chart-bot-discord/crypto-chart-04.png", caption: "Graphique 1 an (daily) et liste des commandes" },
-        { src: "/images/projects/crypto-chart-bot-discord/crypto-chart-05.png", caption: "Profil du bot et lien d'ajout au serveur" },
+        {
+          src: "/images/projects/crypto-chart-bot-discord/crypto-chart-01.png",
+          caption: "Identité visuelle du bot (avatar)",
+        },
+        {
+          src: "/images/projects/crypto-chart-bot-discord/crypto-chart-02.png",
+          caption: "Commande /chart_btc — prix actuel et graphique Bitcoin",
+        },
+        {
+          src: "/images/projects/crypto-chart-bot-discord/crypto-chart-03.png",
+          caption: "Réponse du bot avec graphique BTCUSDT",
+        },
+        {
+          src: "/images/projects/crypto-chart-bot-discord/crypto-chart-04.png",
+          caption: "Graphique 1 an (daily) et liste des commandes",
+        },
+        {
+          src: "/images/projects/crypto-chart-bot-discord/crypto-chart-05.png",
+          caption: "Profil du bot et lien d'ajout au serveur",
+        },
       ],
     },
     {
@@ -477,13 +548,35 @@ const dataFr: PortfolioData = {
       videoUrl: "https://www.youtube.com/watch?v=FLKO3-5ikgQ",
       reportUrl: "/documents/presentation-valpineta-s6.pdf",
       gallery: [
-        { src: "/images/projects/valpineta/valpineta-01.png", caption: "Logo Valpineta" },
-        { src: "/images/projects/valpineta/valpineta-02.png", caption: "Carte avec itinéraires" },
-        { src: "/images/projects/valpineta/valpineta-03.png", caption: "Fiche détail d'une excursion (Balcon de Pineta - Lac Marboré)" },
-        { src: "/images/projects/valpineta/valpineta-04.png", caption: "Suivi en direct : carte et statistiques" },
-        { src: "/images/projects/valpineta/valpineta-05.png", caption: "Résumé du parcours (description, dénivelé)" },
-        { src: "/images/projects/valpineta/valpineta-06.png", caption: "Fin d'excursion — Félicitations" },
-        { src: "/images/projects/valpineta/valpineta-07.png", caption: "Nouvel avertissement (signalement)" },
+        {
+          src: "/images/projects/valpineta/valpineta-01.png",
+          caption: "Logo Valpineta",
+        },
+        {
+          src: "/images/projects/valpineta/valpineta-02.png",
+          caption: "Carte avec itinéraires",
+        },
+        {
+          src: "/images/projects/valpineta/valpineta-03.png",
+          caption:
+            "Fiche détail d'une excursion (Balcon de Pineta - Lac Marboré)",
+        },
+        {
+          src: "/images/projects/valpineta/valpineta-04.png",
+          caption: "Suivi en direct : carte et statistiques",
+        },
+        {
+          src: "/images/projects/valpineta/valpineta-05.png",
+          caption: "Résumé du parcours (description, dénivelé)",
+        },
+        {
+          src: "/images/projects/valpineta/valpineta-06.png",
+          caption: "Fin d'excursion — Félicitations",
+        },
+        {
+          src: "/images/projects/valpineta/valpineta-07.png",
+          caption: "Nouvel avertissement (signalement)",
+        },
       ],
     },
   ],
@@ -651,6 +744,46 @@ const dataEn: PortfolioData = {
       ],
       categories: ["web-app"],
       liveUrl: "https://app.snowledge.eu",
+      image: "/images/projects/snowledge/snowledge-01.png",
+      gallery: [
+        {
+          src: "/images/projects/snowledge/snowledge-01.png",
+          caption: "Overview — Statistics and general summary",
+        },
+        {
+          src: "/images/projects/snowledge/snowledge-02.png",
+          caption: "Analysis result — Synthesis and recommendations",
+        },
+        {
+          src: "/images/projects/snowledge/snowledge-03.png",
+          caption: "Analysis Studio — Create and history",
+        },
+        {
+          src: "/images/projects/snowledge/snowledge-04.png",
+          caption: "To-do list — Kanban",
+        },
+        {
+          src: "/images/projects/snowledge/snowledge-05.png",
+          caption: "Overview — Stats and topics to explore",
+        },
+        {
+          src: "/images/projects/snowledge/snowledge-06.png",
+          caption: "Latest analyses — List and sub-results",
+        },
+        {
+          src: "/images/projects/snowledge/snowledge-07.png",
+          caption: "Admin — Registered users and key figures",
+        },
+        {
+          src: "/images/projects/snowledge/snowledge-08.png",
+          caption: "Community plan setup — Community type",
+        },
+        {
+          src: "/images/projects/snowledge/snowledge-09.png",
+          caption:
+            "My statistics — KPIs, community dynamics, platform breakdown",
+        },
+      ],
     },
     {
       slug: "intranet-ch-cahors",
@@ -810,7 +943,11 @@ const dataEn: PortfolioData = {
       repoUrl: "https://github.com/Alexandre-Pascal/arbirange",
       image: "/images/projects/arbirange/arbirange-01.png",
       gallery: [
-        { src: "/images/projects/arbirange/arbirange-01.png", caption: "The dashboard might look something like this (e.g. ArbiRange Vault)." },
+        {
+          src: "/images/projects/arbirange/arbirange-01.png",
+          caption:
+            "The dashboard might look something like this (e.g. ArbiRange Vault).",
+        },
       ],
     },
     {
@@ -898,14 +1035,30 @@ const dataEn: PortfolioData = {
         "Binance API",
       ],
       repoUrl: "https://github.com/Alexandre-Pascal/CryptoChartBot-Discord",
-      liveUrl: "https://discord.com/oauth2/authorize?client_id=1301243281883009145&permissions=2147584000&integration_type=0&scope=bot",
+      liveUrl:
+        "https://discord.com/oauth2/authorize?client_id=1301243281883009145&permissions=2147584000&integration_type=0&scope=bot",
       image: "/images/projects/crypto-chart-bot-discord/crypto-chart-01.png",
       gallery: [
-        { src: "/images/projects/crypto-chart-bot-discord/crypto-chart-01.png", caption: "Bot visual identity (avatar)" },
-        { src: "/images/projects/crypto-chart-bot-discord/crypto-chart-02.png", caption: "Command /chart_btc — current price and Bitcoin chart" },
-        { src: "/images/projects/crypto-chart-bot-discord/crypto-chart-03.png", caption: "Bot response with BTCUSDT chart" },
-        { src: "/images/projects/crypto-chart-bot-discord/crypto-chart-04.png", caption: "1-year (daily) chart and command list" },
-        { src: "/images/projects/crypto-chart-bot-discord/crypto-chart-05.png", caption: "Bot profile and server invite link" },
+        {
+          src: "/images/projects/crypto-chart-bot-discord/crypto-chart-01.png",
+          caption: "Bot visual identity (avatar)",
+        },
+        {
+          src: "/images/projects/crypto-chart-bot-discord/crypto-chart-02.png",
+          caption: "Command /chart_btc — current price and Bitcoin chart",
+        },
+        {
+          src: "/images/projects/crypto-chart-bot-discord/crypto-chart-03.png",
+          caption: "Bot response with BTCUSDT chart",
+        },
+        {
+          src: "/images/projects/crypto-chart-bot-discord/crypto-chart-04.png",
+          caption: "1-year (daily) chart and command list",
+        },
+        {
+          src: "/images/projects/crypto-chart-bot-discord/crypto-chart-05.png",
+          caption: "Bot profile and server invite link",
+        },
       ],
     },
     {
@@ -915,7 +1068,7 @@ const dataEn: PortfolioData = {
         "Third-year group project (BUT): mobile app for Refuge de Pineta and hikers — maps, trails, points of interest, offline mode.",
       categories: ["mobile"],
       longDescription:
-        "Third-year group project in the Computer Science bachelor (BUT) at IUT Bayonne, for client Marie Bruyère (her husband runs Refuge de Pineta). Team of five students: Robin, Oier, Nicolas, Alexandre, and Tom.\n\nContext: the Pineta valley offers many hikes already listed on the refuge website, but the refuge has no internet connection. The app must allow following these excursions offline — data is downloaded before arriving at the refuge.\n\nMain features: browse excursions (detail sheets, elevation profile, description); map with trails and points of interest; real-time excursion tracking (timer, altitude, distance, elevation gain/loss) in foreground or background; reports (add photos with camera/library permissions, field validation); pop-up when nearing a report (≈ 30 m) to mark \"Present\", \"Absent\" (removes the report), or \"See more\".\n\nSync: upward (sending reports and deletions to the server, store + cron when connection is lost); downward (downloading excursions.json and GPX files from the API, temp file + MD5 check for integrity).\n\nEnvironment: React Native + Expo (cross-platform, Expo Go for live dev, EAS for builds and App Store / Play Store distribution). WordPress API: PHP plugin for fetching, saving, and updating data; Docker to mirror the site environment in dev. Codebase based on Ignite boilerplate (app: components, screens, models/stores, services, i18n, theme, utils; assets; tests). Tools: Trello, GitHub, Teams.\n\nStack: React Native (Expo), TypeScript, react-native-maps, MobX / MobX State Tree, Expo Location and File System, i18n-js. Unit tests (Jest) on the upward sync store; Maestro E2E tests. Map tiles: Tiles folder + tiles_struct.json in src/assets/.",
+        'Third-year group project in the Computer Science bachelor (BUT) at IUT Bayonne, for client Marie Bruyère (her husband runs Refuge de Pineta). Team of five students: Robin, Oier, Nicolas, Alexandre, and Tom.\n\nContext: the Pineta valley offers many hikes already listed on the refuge website, but the refuge has no internet connection. The app must allow following these excursions offline — data is downloaded before arriving at the refuge.\n\nMain features: browse excursions (detail sheets, elevation profile, description); map with trails and points of interest; real-time excursion tracking (timer, altitude, distance, elevation gain/loss) in foreground or background; reports (add photos with camera/library permissions, field validation); pop-up when nearing a report (≈ 30 m) to mark "Present", "Absent" (removes the report), or "See more".\n\nSync: upward (sending reports and deletions to the server, store + cron when connection is lost); downward (downloading excursions.json and GPX files from the API, temp file + MD5 check for integrity).\n\nEnvironment: React Native + Expo (cross-platform, Expo Go for live dev, EAS for builds and App Store / Play Store distribution). WordPress API: PHP plugin for fetching, saving, and updating data; Docker to mirror the site environment in dev. Codebase based on Ignite boilerplate (app: components, screens, models/stores, services, i18n, theme, utils; assets; tests). Tools: Trello, GitHub, Teams.\n\nStack: React Native (Expo), TypeScript, react-native-maps, MobX / MobX State Tree, Expo Location and File System, i18n-js. Unit tests (Jest) on the upward sync store; Maestro E2E tests. Map tiles: Tiles folder + tiles_struct.json in src/assets/.',
       technologies: [
         "React Native",
         "Expo",
@@ -929,13 +1082,34 @@ const dataEn: PortfolioData = {
       videoUrl: "https://www.youtube.com/watch?v=FLKO3-5ikgQ",
       reportUrl: "/documents/presentation-valpineta-s6.pdf",
       gallery: [
-        { src: "/images/projects/valpineta/valpineta-01.png", caption: "Valpineta logo" },
-        { src: "/images/projects/valpineta/valpineta-02.png", caption: "Map with trails" },
-        { src: "/images/projects/valpineta/valpineta-03.png", caption: "Excursion detail (Balcon de Pineta - Lac Marboré)" },
-        { src: "/images/projects/valpineta/valpineta-04.png", caption: "Live tracking: map and stats" },
-        { src: "/images/projects/valpineta/valpineta-05.png", caption: "Route summary (description, elevation)" },
-        { src: "/images/projects/valpineta/valpineta-06.png", caption: "Excursion completed — Congratulations" },
-        { src: "/images/projects/valpineta/valpineta-07.png", caption: "New alert (report)" },
+        {
+          src: "/images/projects/valpineta/valpineta-01.png",
+          caption: "Valpineta logo",
+        },
+        {
+          src: "/images/projects/valpineta/valpineta-02.png",
+          caption: "Map with trails",
+        },
+        {
+          src: "/images/projects/valpineta/valpineta-03.png",
+          caption: "Excursion detail (Balcon de Pineta - Lac Marboré)",
+        },
+        {
+          src: "/images/projects/valpineta/valpineta-04.png",
+          caption: "Live tracking: map and stats",
+        },
+        {
+          src: "/images/projects/valpineta/valpineta-05.png",
+          caption: "Route summary (description, elevation)",
+        },
+        {
+          src: "/images/projects/valpineta/valpineta-06.png",
+          caption: "Excursion completed — Congratulations",
+        },
+        {
+          src: "/images/projects/valpineta/valpineta-07.png",
+          caption: "New alert (report)",
+        },
       ],
     },
   ],
@@ -1024,7 +1198,8 @@ export function getPortfolioData(locale: DataLocale): PortfolioData {
   const data = locale === "en" ? dataEn : dataFr;
   const projects = [...data.projects].sort(
     (a, b) =>
-      PROJECT_DISPLAY_ORDER.indexOf(a.slug) - PROJECT_DISPLAY_ORDER.indexOf(b.slug),
+      PROJECT_DISPLAY_ORDER.indexOf(a.slug) -
+      PROJECT_DISPLAY_ORDER.indexOf(b.slug),
   );
   return { ...data, projects };
 }

@@ -49,7 +49,7 @@ export function Header() {
         aria-label={t.aria.nav}
       >
         <Link
-          href="#hero"
+          href="/#hero"
           className="font-heading text-lg font-semibold text-foreground transition-colors hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
         >
           Portfolio
@@ -60,7 +60,7 @@ export function Header() {
             {navItems.map(({ id, label }) => (
               <li key={id}>
                 <Link
-                  href={`#${id}`}
+                  href={`/#${id}`}
                   className={`relative py-2 text-sm font-medium transition-colors hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background ${
                     activeId === id ? "text-accent" : "text-foreground-muted"
                   }`}
@@ -190,7 +190,7 @@ export function Header() {
               {navItems.map(({ id, label }) => (
                 <li key={id}>
                   <Link
-                    href={`#${id}`}
+                    href={`/#${id}`}
                     className={`block rounded-lg px-4 py-3 text-base font-medium transition-colors ${
                       activeId === id
                         ? "bg-background-card text-accent"

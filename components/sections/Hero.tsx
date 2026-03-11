@@ -59,13 +59,13 @@ export function Hero() {
             className="mt-10 flex flex-wrap items-center justify-center gap-4 md:justify-start"
           >
             <Link
-              href="#projects"
+              href="/#projects"
               className="inline-flex h-12 min-w-[160px] items-center justify-center rounded-lg bg-accent px-6 font-semibold text-background shadow-lg shadow-accent/25 transition-all hover:bg-accent-hover hover:shadow-accent/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
               {t.hero.viewPortfolio}
             </Link>
             <Link
-              href="#contact"
+              href="/#contact"
               className="inline-flex h-12 min-w-[160px] items-center justify-center rounded-lg border border-[var(--border)] bg-transparent px-6 font-semibold text-foreground transition-all hover:border-accent hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
               {t.hero.contactMe}

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useLocale } from "@/context/LocaleContext";
 import { getUi } from "@/lib/i18n";
 import { snowledgeContent } from "@/lib/snowledge-portfolio-content";
@@ -29,7 +30,9 @@ export function ProjectSnowledgeDetail({ project }: { project: ProjectItem }) {
           <h1 className="mt-2 font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
             {project.name}
           </h1>
-          <p className="mt-2 text-base text-foreground-muted">{content.period}</p>
+          <p className="mt-2 text-base text-foreground-muted">
+            {content.period}
+          </p>
           <p className="mt-6 text-lg leading-relaxed text-foreground">
             {content.pitch}
           </p>
@@ -143,6 +146,33 @@ export function ProjectSnowledgeDetail({ project }: { project: ProjectItem }) {
             ))}
           </ul>
         </section>
+
+        {/* Gallery */}
+        {project.gallery && project.gallery.length > 0 && (
+          <section className="mb-14">
+            <h2 className="mb-6 font-heading text-sm font-semibold uppercase tracking-wider text-foreground-muted">
+              {t.projectDetail.gallery}
+            </h2>
+            <div className="grid gap-8 sm:grid-cols-1">
+              {project.gallery.map((item, i) => (
+                <figure key={i} className="space-y-2">
+                  <div className="relative aspect-video w-full overflow-hidden rounded-xl border border-border bg-background-card">
+                    <Image
+                      src={item.src}
+                      alt={item.caption}
+                      fill
+                      className="object-contain"
+                      sizes="(max-width: 768px) 100vw, 672px"
+                    />
+                  </div>
+                  <figcaption className="text-center text-sm text-foreground-muted">
+                    {item.caption}
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* Stack */}
         <section className="mb-10">
