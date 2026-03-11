@@ -110,15 +110,15 @@ const dataFr: PortfolioData = {
     name: "Alexandre Pascal",
     location: "Cahors, France",
     tagline:
-      "Développeur blockchain : smart contracts, applications décentralisées et web.",
+      "Développeur Full Stack — React, Next.js, Node.js. À l'aise en blockchain (Solidity, dApps) quand le projet le demande.",
     image: "/images/profile.png",
   },
   professional: {
-    title: "Développeur Blockchain",
-    subtitle: "Solidity, React, Next.js",
+    title: "Développeur Full Stack",
+    subtitle: "React, Next.js, Node.js · Solidity",
     about:
-      "Avec un BUT en informatique et une vraie passion pour la blockchain, je recherche un poste de développeur dans ce domaine. Lors de mes stages, j'ai contribué à l'analyse des besoins utilisateurs et au développement de solutions techniques. Sérieux et autonome, je suis prêt à mettre mes compétences au service de votre équipe dès janvier 2025.",
-    goal: "Recherche un poste de développeur blockchain, disponible dès janvier 2025.",
+      "Formation en informatique (BUT) et un passage par le commercial en startup avant de me consacrer au développement. Aujourd’hui je suis développeur Full Stack : front (React, Next.js), back (Node.js, NestJS), bases de données, déploiement — et capable d’intervenir sur la blockchain (Solidity, applications décentralisées) quand le projet le requiert. Sérieux et autonome, j’ai notamment cofondé Snowledge et mené des refontes techniques en stage. Je recherche un poste Full Stack en full remote ou sur la zone Montauban / Toulouse.",
+    goal: "Recherche un poste de développeur Full Stack, en full remote ou sur Montauban / Toulouse, disponible dès janvier 2025.",
   },
   education: [
     {
@@ -662,14 +662,14 @@ const dataEn: PortfolioData = {
     name: "Alexandre Pascal",
     location: "Cahors, France",
     tagline:
-      "Blockchain developer: smart contracts, decentralised applications and web.",
+      "Full Stack Developer — React, Next.js, Node.js. Comfortable with blockchain (Solidity, dApps) when the project calls for it.",
   },
   professional: {
-    title: "Blockchain Developer",
-    subtitle: "Solidity, React, Next.js",
+    title: "Full Stack Developer",
+    subtitle: "React, Next.js, Node.js · Solidity",
     about:
-      "With a bachelor's degree in computer science and a real passion for blockchain, I am looking for a developer position in this field. During my internships, I contributed to user needs analysis and the development of technical solutions. Reliable and autonomous, I am ready to put my skills at the service of your team from January 2025.",
-    goal: "Seeking a blockchain developer position, available from January 2025.",
+      "Background in computer science (bachelor’s degree) and a stint in sales at a startup before focusing on development. I now work as a Full Stack developer: front (React, Next.js), back (Node.js, NestJS), databases, deployment — and I can work on blockchain (Solidity, decentralised applications) when the project requires it. Reliable and autonomous, I co-founded Snowledge and led technical overhauls during my internships. I am looking for a Full Stack position, either full remote or in the Montauban / Toulouse area.",
+    goal: "Seeking a Full Stack developer position, full remote or Montauban / Toulouse area, available from January 2025.",
   },
   education: [
     {
