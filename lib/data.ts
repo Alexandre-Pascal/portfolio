@@ -420,16 +420,6 @@ const dataFr: PortfolioData = {
       ],
     },
     {
-      slug: "interface-web-edicad",
-      name: "Interface web — EDICAD",
-      description:
-        "Développement de l'interface web d'une application métier à partir des maquettes designers (client et serveur). Stage EDICAD.",
-      longDescription:
-        "Production du code côté client et serveur pour réaliser l'interface web d'une application telle que maquettée par les designers. Stack : C#, HTML, CSS, IIS, Blazor, .NET 7. Stage réalisé à EDICAD (Cahors).",
-      technologies: ["C#", "Blazor", ".NET 7", "HTML", "CSS", "IIS"],
-      categories: ["web-app"],
-    },
-    {
       slug: "valpineta",
       name: "Valpineta",
       description:
@@ -845,16 +835,6 @@ const dataEn: PortfolioData = {
       ],
     },
     {
-      slug: "interface-web-edicad",
-      name: "Web interface — EDICAD",
-      description:
-        "Business application web interface from designer mockups (client and server). EDICAD internship.",
-      categories: ["web-app"],
-      longDescription:
-        "Client- and server-side code to build the web interface of a business application as designed by the design team. Stack: C#, HTML, CSS, IIS, Blazor, .NET 7. Internship at EDICAD (Cahors).",
-      technologies: ["C#", "Blazor", ".NET 7", "HTML", "CSS", "IIS"],
-    },
-    {
       slug: "valpineta",
       name: "Valpineta",
       description:
@@ -953,8 +933,25 @@ const dataEn: PortfolioData = {
 
 export type DataLocale = "fr" | "en";
 
+/** Ordre d'affichage des projets (1 = Ladorée, 2 = Valpineta, 3 = Intranet, …) */
+const PROJECT_DISPLAY_ORDER: string[] = [
+  "ladoree-web3",
+  "valpineta",
+  "intranet-ch-cahors",
+  "arbirange",
+  "liquidity-farming-tracker",
+  "crypto-chart-bot-discord",
+  "chrono-meditation",
+  "blockchain-bank",
+];
+
 export function getPortfolioData(locale: DataLocale): PortfolioData {
-  return locale === "en" ? dataEn : dataFr;
+  const data = locale === "en" ? dataEn : dataFr;
+  const projects = [...data.projects].sort(
+    (a, b) =>
+      PROJECT_DISPLAY_ORDER.indexOf(a.slug) - PROJECT_DISPLAY_ORDER.indexOf(b.slug),
+  );
+  return { ...data, projects };
 }
 
 export function getProjectBySlug(
@@ -966,7 +963,9 @@ export function getProjectBySlug(
 }
 
 export function getAllProjectSlugs(): string[] {
-  return dataFr.projects.map((p) => p.slug);
+  return PROJECT_DISPLAY_ORDER.filter((slug) =>
+    dataFr.projects.some((p) => p.slug === slug),
+  );
 }
 
 // Sections pour la navigation (ordre affiché)
