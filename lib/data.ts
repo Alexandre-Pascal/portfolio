@@ -409,7 +409,7 @@ const dataFr: PortfolioData = {
       description:
         "Projet tutoré BUT 3e année : application mobile pour le refuge de Pineta et les randonneurs — cartes, tracés, points d'intérêt, mode hors-ligne.",
       longDescription:
-        "Projet tutoré de troisième (et dernière) année de BUT Informatique à l'IUT de Bayonne. Équipe de cinq étudiants. Partenaire : le refuge de Pineta (valpineta.eu).\n\nBesoin : une application mobile pour que les randonneurs aient accès aux tracés et aux cartes, et puissent placer des points d'intérêt (belle vue, arbre bloquant le chemin, etc.) lors d'une balade. Contrainte forte : l'application doit fonctionner hors-ligne (pas de connexion en montagne).\n\nStructure du dépôt : Documentation (doc utile au projet) ; src (code de l'application) ; api-wp (backend) ; archives. Tuiles de carte : dossier Tiles + tiles_struct.json à placer dans src/assets/. Tests unitaires et d'intégration (Jest), tests E2E Maestro. Stack : React Native (Expo), TypeScript, react-native-maps (cartographie), MobX / MobX State Tree (état), Expo Location et File System (localisation et stockage), i18n-js (multilingue). Build iOS/Android (EAS), APK release possible.",
+        "Projet tutoré de troisième année de BUT Informatique à l'IUT de Bayonne, pour la commanditaire Marie Bruyère (son mari gère le refuge de Pineta). Équipe de cinq étudiants : Robin, Oier, Nicolas, Alexandre et Tom.\n\nContexte : la vallée de Pineta propose de nombreuses randonnées déjà présentes sur le site du refuge, mais celui-ci n'a pas de connexion internet. L'application doit permettre de suivre ces excursions hors-ligne — les données sont donc à télécharger avant d'arriver au refuge.\n\nFonctionnalités principales : consultation des excursions (fiches détail, dénivelé, description) ; carte avec itinéraires et points d'intérêt ; suivi en temps réel d'une excursion (chronomètre, altitude, distance parcourue, dénivelé) en premier plan ou en arrière-plan ; signalements (ajout de photos avec permissions appareil/galerie, validation des champs) ; pop-up à l'approche d'un signalement (≈ 30 m) pour indiquer « Présent », « Absent » (suppression du signalement) ou « Voir plus ».\n\nSynchronisation : montante (envoi des signalements et suppressions vers le serveur, store + cron en cas de connexion coupée) ; descendante (téléchargement de excursions.json et des fichiers GPX depuis l'API, fichier temporaire + vérification MD5 pour l'intégrité).\n\nEnvironnement : React Native + Expo (cross-platform, Expo Go pour le dev en temps réel, EAS pour les builds et la distribution App Store / Play Store). API WordPress : plugin PHP pour récupérer, sauvegarder et modifier les données ; Docker pour simuler l'environnement du site en dev. Arborescence basée sur le boilerplate Ignite (app : components, screens, models/stores, services, i18n, theme, utils ; assets ; tests). Outils : Trello, GitHub, Teams.\n\nStack : React Native (Expo), TypeScript, react-native-maps, MobX / MobX State Tree, Expo Location et File System, i18n-js. Tests unitaires (Jest) sur le store de synchronisation montante ; tests E2E Maestro. Tuiles de carte : dossier Tiles + tiles_struct.json dans src/assets/.",
       technologies: [
         "React Native",
         "Expo",
@@ -419,6 +419,18 @@ const dataFr: PortfolioData = {
         "Jest",
       ],
       repoUrl: "https://github.com/Alexandre-Pascal/Valpineta",
+      image: "/images/projects/valpineta/valpineta-01.png",
+      videoUrl: "https://www.youtube.com/watch?v=FLKO3-5ikgQ",
+      reportUrl: "/documents/presentation-valpineta-s6.pdf",
+      gallery: [
+        { src: "/images/projects/valpineta/valpineta-01.png", caption: "Logo Valpineta" },
+        { src: "/images/projects/valpineta/valpineta-02.png", caption: "Carte avec itinéraires" },
+        { src: "/images/projects/valpineta/valpineta-03.png", caption: "Fiche détail d'une excursion (Balcon de Pineta - Lac Marboré)" },
+        { src: "/images/projects/valpineta/valpineta-04.png", caption: "Suivi en direct : carte et statistiques" },
+        { src: "/images/projects/valpineta/valpineta-05.png", caption: "Résumé du parcours (description, dénivelé)" },
+        { src: "/images/projects/valpineta/valpineta-06.png", caption: "Fin d'excursion — Félicitations" },
+        { src: "/images/projects/valpineta/valpineta-07.png", caption: "Nouvel avertissement (signalement)" },
+      ],
     },
   ],
   skills: [
@@ -800,7 +812,7 @@ const dataEn: PortfolioData = {
       description:
         "Third-year group project (BUT): mobile app for Refuge de Pineta and hikers — maps, trails, points of interest, offline mode.",
       longDescription:
-        "Third and final year group project in the Computer Science bachelor (BUT) at IUT Bayonne. Team of five students. Partner: Refuge de Pineta (valpineta.eu).\n\nNeed: a mobile app so hikers can access trails and maps, and place points of interest (scenic view, blocked path, etc.) during a hike. Key constraint: the app must work offline (no connection in the mountains).\n\nRepository structure: Documentation (project documentation); src (application code); api-wp (backend); archives. Map tiles: Tiles folder + tiles_struct.json to be placed in src/assets/. Unit and integration tests (Jest), Maestro E2E tests. Stack: React Native (Expo), TypeScript, react-native-maps (mapping), MobX / MobX State Tree (state), Expo Location and File System (location and storage), i18n-js (multilingual). iOS/Android build (EAS), release APK available.",
+        "Third-year group project in the Computer Science bachelor (BUT) at IUT Bayonne, for client Marie Bruyère (her husband runs Refuge de Pineta). Team of five students: Robin, Oier, Nicolas, Alexandre, and Tom.\n\nContext: the Pineta valley offers many hikes already listed on the refuge website, but the refuge has no internet connection. The app must allow following these excursions offline — data is downloaded before arriving at the refuge.\n\nMain features: browse excursions (detail sheets, elevation profile, description); map with trails and points of interest; real-time excursion tracking (timer, altitude, distance, elevation gain/loss) in foreground or background; reports (add photos with camera/library permissions, field validation); pop-up when nearing a report (≈ 30 m) to mark \"Present\", \"Absent\" (removes the report), or \"See more\".\n\nSync: upward (sending reports and deletions to the server, store + cron when connection is lost); downward (downloading excursions.json and GPX files from the API, temp file + MD5 check for integrity).\n\nEnvironment: React Native + Expo (cross-platform, Expo Go for live dev, EAS for builds and App Store / Play Store distribution). WordPress API: PHP plugin for fetching, saving, and updating data; Docker to mirror the site environment in dev. Codebase based on Ignite boilerplate (app: components, screens, models/stores, services, i18n, theme, utils; assets; tests). Tools: Trello, GitHub, Teams.\n\nStack: React Native (Expo), TypeScript, react-native-maps, MobX / MobX State Tree, Expo Location and File System, i18n-js. Unit tests (Jest) on the upward sync store; Maestro E2E tests. Map tiles: Tiles folder + tiles_struct.json in src/assets/.",
       technologies: [
         "React Native",
         "Expo",
@@ -810,6 +822,18 @@ const dataEn: PortfolioData = {
         "Jest",
       ],
       repoUrl: "https://github.com/Alexandre-Pascal/Valpineta",
+      image: "/images/projects/valpineta/valpineta-01.png",
+      videoUrl: "https://www.youtube.com/watch?v=FLKO3-5ikgQ",
+      reportUrl: "/documents/presentation-valpineta-s6.pdf",
+      gallery: [
+        { src: "/images/projects/valpineta/valpineta-01.png", caption: "Valpineta logo" },
+        { src: "/images/projects/valpineta/valpineta-02.png", caption: "Map with trails" },
+        { src: "/images/projects/valpineta/valpineta-03.png", caption: "Excursion detail (Balcon de Pineta - Lac Marboré)" },
+        { src: "/images/projects/valpineta/valpineta-04.png", caption: "Live tracking: map and stats" },
+        { src: "/images/projects/valpineta/valpineta-05.png", caption: "Route summary (description, elevation)" },
+        { src: "/images/projects/valpineta/valpineta-06.png", caption: "Excursion completed — Congratulations" },
+        { src: "/images/projects/valpineta/valpineta-07.png", caption: "New alert (report)" },
+      ],
     },
   ],
   skills: [
