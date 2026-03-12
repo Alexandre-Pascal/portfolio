@@ -244,6 +244,37 @@ const dataFr: PortfolioData = {
       ],
     },
     {
+      slug: "gites-perigord",
+      name: "Gîtes Périgord",
+      description:
+        "Site vitrine pour les gîtes de mes parents en Dordogne : Les Glycines et La Maisonnette, à Saint-Martial-de-Nabirat. Hero, fiches logements, expérience du domaine, région, formulaire de réservation et calendrier (séjour 7 nuits samedi–samedi).",
+      longDescription:
+        "Site vitrine pour deux gîtes de charme (Les Glycines et La Maisonnette) à Saint-Martial-de-Nabirat, au cœur du Périgord Noir. Réalisé pour mes parents.\n\nContenu : hero avec accroche et image (piscine couverte), section Nos logements avec fiches détaillées par gîte (capacité, équipements, galerie, réservation Airbnb ou directe), L'expérience du domaine (espaces communs — piscine 10×5 m chauffée, cour, ping-pong, pétanque — et jardins privés par gîte), La région (Dordogne, Sarlat, randonnées, gastronomie), Contact / Réservation avec formulaire de demande, calendrier (séjour minimum 7 nuits, arrivée/départ le samedi), liens Airbnb et carte.\n\nStack : Next.js 16 (App Router, React 19), TypeScript, Tailwind CSS 4, shadcn/Base UI (boutons, formulaire, calendrier), date-fns, Lucide. Polices Playfair Display et DM Sans. Déployé sur Vercel. À venir : envoi d’emails pour le formulaire de réservation.",
+      technologies: [
+        "Next.js 16",
+        "React 19",
+        "TypeScript",
+        "Tailwind CSS 4",
+        "shadcn / Base UI",
+        "date-fns",
+        "Lucide",
+      ],
+      categories: ["web-app"],
+      liveUrl: "https://gite-perigord.vercel.app/",
+      repoUrl: "https://github.com/Alexandre-Pascal/airbnb-dordogne",
+      image: "/images/projects/gites-perigord/gites-perigord-01.png",
+      gallery: [
+        { src: "/images/projects/gites-perigord/gites-perigord-01.png", caption: "Hero — Séjour d'exception en Périgord Noir" },
+        { src: "/images/projects/gites-perigord/gites-perigord-02.png", caption: "Nos logements — Les Glycines" },
+        { src: "/images/projects/gites-perigord/gites-perigord-03.png", caption: "La Maisonnette — détail et galerie" },
+        { src: "/images/projects/gites-perigord/gites-perigord-04.png", caption: "L'expérience du domaine — espaces communs et intimité" },
+        { src: "/images/projects/gites-perigord/gites-perigord-05.png", caption: "La région — Découvrir le Périgord Noir" },
+        { src: "/images/projects/gites-perigord/gites-perigord-06.png", caption: "Randonnées, nature et gastronomie" },
+        { src: "/images/projects/gites-perigord/gites-perigord-07.png", caption: "Demande de réservation — calendrier et formulaire" },
+        { src: "/images/projects/gites-perigord/gites-perigord-08.png", caption: "Contact — carte et coordonnées" },
+      ],
+    },
+    {
       slug: "intranet-ch-cahors",
       name: "Intranet CH Cahors",
       description:
@@ -785,6 +816,37 @@ const dataEn: PortfolioData = {
       ],
     },
     {
+      slug: "gites-perigord",
+      name: "Gîtes Périgord",
+      description:
+        "Showcase site for my parents' gîtes in Dordogne: Les Glycines and La Maisonnette, in Saint-Martial-de-Nabirat. Hero, accommodation pages, domain experience, region, reservation form and calendar (7-night minimum, Saturday–Saturday).",
+      longDescription:
+        "Showcase site for two charming gîtes (Les Glycines and La Maisonnette) in Saint-Martial-de-Nabirat, in the heart of Périgord Noir. Built for my parents.\n\nContent: hero with tagline and image (covered pool), Our accommodations with detailed listings per gîte (capacity, amenities, gallery, Airbnb or direct booking), The domain experience (shared areas — 10×5 m heated pool, courtyard, ping-pong, pétanque — and private gardens per gîte), The region (Dordogne, Sarlat, hiking, gastronomy), Contact / Reservation with request form, calendar (minimum 7-night stay, Saturday arrival/departure), Airbnb links and map.\n\nStack: Next.js 16 (App Router, React 19), TypeScript, Tailwind CSS 4, shadcn/Base UI (buttons, form, calendar), date-fns, Lucide. Playfair Display and DM Sans fonts. Deployed on Vercel. Planned: email sending for the reservation form.",
+      technologies: [
+        "Next.js 16",
+        "React 19",
+        "TypeScript",
+        "Tailwind CSS 4",
+        "shadcn / Base UI",
+        "date-fns",
+        "Lucide",
+      ],
+      categories: ["web-app"],
+      liveUrl: "https://gite-perigord.vercel.app/",
+      repoUrl: "https://github.com/Alexandre-Pascal/airbnb-dordogne",
+      image: "/images/projects/gites-perigord/gites-perigord-01.png",
+      gallery: [
+        { src: "/images/projects/gites-perigord/gites-perigord-01.png", caption: "Hero — Exceptional stay in Périgord Noir" },
+        { src: "/images/projects/gites-perigord/gites-perigord-02.png", caption: "Our accommodations — Les Glycines" },
+        { src: "/images/projects/gites-perigord/gites-perigord-03.png", caption: "La Maisonnette — detail and gallery" },
+        { src: "/images/projects/gites-perigord/gites-perigord-04.png", caption: "The domain experience — shared areas and privacy" },
+        { src: "/images/projects/gites-perigord/gites-perigord-05.png", caption: "The region — Discover Périgord Noir" },
+        { src: "/images/projects/gites-perigord/gites-perigord-06.png", caption: "Hiking, nature and gastronomy" },
+        { src: "/images/projects/gites-perigord/gites-perigord-07.png", caption: "Reservation request — calendar and form" },
+        { src: "/images/projects/gites-perigord/gites-perigord-08.png", caption: "Contact — map and details" },
+      ],
+    },
+    {
       slug: "intranet-ch-cahors",
       name: "Intranet CH Cahors",
       description:
@@ -1188,6 +1250,7 @@ const PROJECT_DISPLAY_ORDER: string[] = [
   "ladoree-web3",
   "valpineta",
   "intranet-ch-cahors",
+  "gites-perigord",
   "arbirange",
   "liquidity-farming-tracker",
   "crypto-chart-bot-discord",
