@@ -247,9 +247,9 @@ const dataFr: PortfolioData = {
       slug: "gites-perigord",
       name: "Gîtes Périgord",
       description:
-        "Site vitrine pour les gîtes de mes parents en Dordogne : Les Glycines et La Maisonnette, à Saint-Martial-de-Nabirat. Hero, fiches logements, expérience du domaine, région, formulaire de réservation et calendrier (séjour 7 nuits samedi–samedi).",
+        "Site vitrine pour les gîtes de mes parents en Dordogne : Les Glycines et La Maisonnette, à Saint-Martial-de-Nabirat. Hero, fiches logements, expérience du domaine, région, formulaire de réservation avec envoi d’emails (Resend) et calendrier (séjour 7 nuits samedi–samedi). Synchronisation du calendrier Airbnb prévue.",
       longDescription:
-        "Site vitrine pour deux gîtes de charme (Les Glycines et La Maisonnette) à Saint-Martial-de-Nabirat, au cœur du Périgord Noir. Réalisé pour mes parents.\n\nContenu : hero avec accroche et image (piscine couverte), section Nos logements avec fiches détaillées par gîte (capacité, équipements, galerie, réservation Airbnb ou directe), L'expérience du domaine (espaces communs — piscine 10×5 m chauffée, cour, ping-pong, pétanque — et jardins privés par gîte), La région (Dordogne, Sarlat, randonnées, gastronomie), Contact / Réservation avec formulaire de demande, calendrier (séjour minimum 7 nuits, arrivée/départ le samedi), liens Airbnb et carte.\n\nStack : Next.js 16 (App Router, React 19), TypeScript, Tailwind CSS 4, shadcn/Base UI (boutons, formulaire, calendrier), date-fns, Lucide. Polices Playfair Display et DM Sans. Déployé sur Vercel. À venir : envoi d’emails pour le formulaire de réservation.",
+        "Site vitrine pour deux gîtes de charme (Les Glycines et La Maisonnette) à Saint-Martial-de-Nabirat, au cœur du Périgord Noir. Réalisé pour mes parents.\n\nContenu : hero avec accroche et image (piscine couverte), section Nos logements avec fiches détaillées par gîte (capacité, équipements, galerie, réservation Airbnb ou directe), L'expérience du domaine (espaces communs — piscine 10×5 m chauffée, cour, ping-pong, pétanque — et jardins privés par gîte), La région (Dordogne, Sarlat, randonnées, gastronomie), Contact / Réservation avec formulaire de demande, calendrier (séjour minimum 7 nuits, arrivée/départ le samedi), liens Airbnb et carte.\n\nEnvoi d’emails (Resend) : à chaque envoi du formulaire, le responsable reçoit un email avec les infos de la demande ; le client reçoit un email de confirmation. Variables d’environnement : RESEND_API_KEY, RESERVATION_EMAIL (et optionnellement FROM_NAME, FROM_EMAIL).\n\nStack : Next.js 16 (App Router, React 19), TypeScript, Tailwind CSS 4, shadcn/Base UI (boutons, formulaire, calendrier), date-fns, Lucide, Resend. Polices Playfair Display et DM Sans. Déployé sur Vercel. À venir : synchronisation du calendrier Airbnb avec le calendrier du site (disponibilités et réservations).",
       technologies: [
         "Next.js 16",
         "React 19",
@@ -258,6 +258,7 @@ const dataFr: PortfolioData = {
         "shadcn / Base UI",
         "date-fns",
         "Lucide",
+        "Resend",
       ],
       categories: ["web-app"],
       liveUrl: "https://gite-perigord.vercel.app/",
@@ -819,9 +820,9 @@ const dataEn: PortfolioData = {
       slug: "gites-perigord",
       name: "Gîtes Périgord",
       description:
-        "Showcase site for my parents' gîtes in Dordogne: Les Glycines and La Maisonnette, in Saint-Martial-de-Nabirat. Hero, accommodation pages, domain experience, region, reservation form and calendar (7-night minimum, Saturday–Saturday).",
+        "Showcase site for my parents' gîtes in Dordogne: Les Glycines and La Maisonnette, in Saint-Martial-de-Nabirat. Hero, accommodation pages, domain experience, region, reservation form with email sending (Resend) and calendar (7-night minimum, Saturday–Saturday). Airbnb calendar sync planned.",
       longDescription:
-        "Showcase site for two charming gîtes (Les Glycines and La Maisonnette) in Saint-Martial-de-Nabirat, in the heart of Périgord Noir. Built for my parents.\n\nContent: hero with tagline and image (covered pool), Our accommodations with detailed listings per gîte (capacity, amenities, gallery, Airbnb or direct booking), The domain experience (shared areas — 10×5 m heated pool, courtyard, ping-pong, pétanque — and private gardens per gîte), The region (Dordogne, Sarlat, hiking, gastronomy), Contact / Reservation with request form, calendar (minimum 7-night stay, Saturday arrival/departure), Airbnb links and map.\n\nStack: Next.js 16 (App Router, React 19), TypeScript, Tailwind CSS 4, shadcn/Base UI (buttons, form, calendar), date-fns, Lucide. Playfair Display and DM Sans fonts. Deployed on Vercel. Planned: email sending for the reservation form.",
+        "Showcase site for two charming gîtes (Les Glycines and La Maisonnette) in Saint-Martial-de-Nabirat, in the heart of Périgord Noir. Built for my parents.\n\nContent: hero with tagline and image (covered pool), Our accommodations with detailed listings per gîte (capacity, amenities, gallery, Airbnb or direct booking), The domain experience (shared areas — 10×5 m heated pool, courtyard, ping-pong, pétanque — and private gardens per gîte), The region (Dordogne, Sarlat, hiking, gastronomy), Contact / Reservation with request form, calendar (minimum 7-night stay, Saturday arrival/departure), Airbnb links and map.\n\nEmail sending (Resend): on each form submission, the manager receives an email with the request details; the client receives a confirmation email. Environment variables: RESEND_API_KEY, RESERVATION_EMAIL (and optionally FROM_NAME, FROM_EMAIL).\n\nStack: Next.js 16 (App Router, React 19), TypeScript, Tailwind CSS 4, shadcn/Base UI (buttons, form, calendar), date-fns, Lucide, Resend. Playfair Display and DM Sans fonts. Deployed on Vercel. Planned: syncing the Airbnb calendar with the site calendar (availability and bookings).",
       technologies: [
         "Next.js 16",
         "React 19",
@@ -830,6 +831,7 @@ const dataEn: PortfolioData = {
         "shadcn / Base UI",
         "date-fns",
         "Lucide",
+        "Resend",
       ],
       categories: ["web-app"],
       liveUrl: "https://gite-perigord.vercel.app/",
