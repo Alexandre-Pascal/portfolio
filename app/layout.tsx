@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Outfit, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { LocaleProvider } from "@/context/LocaleContext";
+import { LocaleKeyWrapper } from "@/components/LocaleKeyWrapper";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 
@@ -40,7 +41,9 @@ export default function RootLayout({
       >
         <LocaleProvider>
           <Header />
-          <main className="pt-16">{children}</main>
+          <main className="pt-16">
+            <LocaleKeyWrapper>{children}</LocaleKeyWrapper>
+          </main>
           <Footer />
         </LocaleProvider>
       </body>

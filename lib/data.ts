@@ -110,7 +110,7 @@ const dataFr: PortfolioData = {
     name: "Alexandre Pascal",
     location: "Cahors, France",
     tagline:
-      "Développeur Full Stack — React, Next.js, Node.js. À l'aise en blockchain (Solidity, dApps) quand le projet le demande.",
+      "Développeur Full Stack — React, Next.js, Node.js. Blockchain (Solidity, dApps)",
     image: "/images/profile.png",
   },
   professional: {
@@ -196,9 +196,6 @@ const dataFr: PortfolioData = {
         "MongoDB",
         "Stripe",
         "Google Cloud (Cloud Run, Cloud Build)",
-        "Discord API",
-        "YouTube Data API",
-        "WhatsApp (Evolution API)",
         "LLM (OVH AI)",
         "Socket.io",
         "i18n",
@@ -606,11 +603,7 @@ const dataFr: PortfolioData = {
     },
     {
       name: "Bases de données & serveur",
-      items: [
-        { name: "PostgreSQL" },
-        { name: "MongoDB" },
-        { name: "IIS" },
-      ],
+      items: [{ name: "PostgreSQL" }, { name: "MongoDB" }, { name: "IIS" }],
     },
     {
       name: "Cloud & hébergement",
@@ -632,10 +625,7 @@ const dataFr: PortfolioData = {
     },
     {
       name: "Langues",
-      items: [
-        { name: "Anglais" },
-        { name: "Espagnol" },
-      ],
+      items: [{ name: "Anglais" }, { name: "Espagnol" }],
     },
   ],
   certifications: [
@@ -662,7 +652,8 @@ const dataEn: PortfolioData = {
     name: "Alexandre Pascal",
     location: "Cahors, France",
     tagline:
-      "Full Stack Developer — React, Next.js, Node.js. Comfortable with blockchain (Solidity, dApps) when the project calls for it.",
+      "Full Stack Developer — React, Next.js, Node.js. Blockchain (Solidity, dApps).",
+    image: "/images/profile.png",
   },
   professional: {
     title: "Full Stack Developer",
@@ -746,9 +737,6 @@ const dataEn: PortfolioData = {
         "MongoDB",
         "Stripe",
         "Google Cloud (Cloud Run, Cloud Build)",
-        "Discord API",
-        "YouTube Data API",
-        "WhatsApp (Evolution API)",
         "LLM (OVH AI)",
         "Socket.io",
         "i18n",
@@ -1148,11 +1136,7 @@ const dataEn: PortfolioData = {
     },
     {
       name: "Databases & server",
-      items: [
-        { name: "PostgreSQL" },
-        { name: "MongoDB" },
-        { name: "IIS" },
-      ],
+      items: [{ name: "PostgreSQL" }, { name: "MongoDB" }, { name: "IIS" }],
     },
     {
       name: "Cloud & hosting",
@@ -1174,10 +1158,7 @@ const dataEn: PortfolioData = {
     },
     {
       name: "Languages",
-      items: [
-        { name: "English" },
-        { name: "Spanish" },
-      ],
+      items: [{ name: "English" }, { name: "Spanish" }],
     },
   ],
   certifications: [
