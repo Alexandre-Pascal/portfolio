@@ -27,7 +27,7 @@ export function Skills() {
   return (
     <section
       id="skills"
-      className="scroll-mt-20 border-t border-border bg-background-secondary/50 px-4 py-20 md:px-6 md:py-28"
+      className="scroll-mt-20 border-t border-border bg-background-secondary/50 px-4 py-14 md:px-6 md:py-20"
     >
       <div className="mx-auto max-w-6xl">
         <motion.h2
@@ -56,7 +56,9 @@ export function Skills() {
               <h3 className="font-heading text-lg font-semibold text-accent">
                 {category.name}
               </h3>
-              <ul className="mt-4 space-y-2">
+              <ul
+                className={`mt-4 ${category.items.length > 5 ? "grid grid-cols-2 gap-x-4 gap-y-2" : "space-y-2"}`}
+              >
                 {category.items.map((skill) => (
                   <li
                     key={skill.name}

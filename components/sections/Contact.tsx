@@ -14,7 +14,7 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="scroll-mt-20 border-t border-border bg-background-secondary/50 px-4 py-20 md:px-6 md:py-28"
+      className="scroll-mt-20 border-t border-border bg-background-secondary/50 px-4 py-14 md:px-6 md:py-20"
     >
       <div className="mx-auto max-w-6xl">
         <motion.h2

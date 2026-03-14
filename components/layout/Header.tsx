@@ -9,6 +9,7 @@ import { getUi } from "@/lib/i18n";
 import { sectionIds, type SectionId } from "@/lib/data";
 
 const navIds: SectionId[] = [
+  "hero",
   "about",
   "education",
   "experience",
@@ -38,6 +39,14 @@ export function Header() {
 
   const handleNavClick = () => setMobileOpen(false);
 
+  const handleNavLinkClick = (e: React.MouseEvent, id: SectionId) => {
+    if (typeof window !== "undefined" && window.location.hash === `#${id}`) {
+      e.preventDefault();
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    }
+    setMobileOpen(false);
+  };
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -64,7 +73,7 @@ export function Header() {
                   className={`relative py-2 text-sm font-medium transition-colors hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background ${
                     activeId === id ? "text-accent" : "text-foreground-muted"
                   }`}
-                  onClick={handleNavClick}
+                  onClick={(e) => handleNavLinkClick(e, id)}
                 >
                   {label}
                   {activeId === id && (
@@ -196,7 +205,7 @@ export function Header() {
                         ? "bg-background-card text-accent"
                         : "text-foreground hover:bg-background-card hover:text-accent"
                     }`}
-                    onClick={handleNavClick}
+                    onClick={(e) => handleNavLinkClick(e, id)}
                   >
                     {label}
                   </Link>

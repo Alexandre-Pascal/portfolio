@@ -5,6 +5,7 @@ import { LocaleProvider } from "@/context/LocaleContext";
 import { LocaleKeyWrapper } from "@/components/LocaleKeyWrapper";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -45,6 +46,7 @@ export default function RootLayout({
             <LocaleKeyWrapper>{children}</LocaleKeyWrapper>
           </main>
           <Footer />
+          <ScrollToTop />
         </LocaleProvider>
       </body>
     </html>
