@@ -52,7 +52,7 @@ export default function ProjectDetailPage() {
   return (
     <article className="relative min-h-[60vh] overflow-hidden px-4 py-20 md:px-6 md:py-28">
       <div
-        className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(34,211,238,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(34,211,238,0.025)_1px,transparent_1px)] bg-[size:64px_64px]"
+        className="pointer-events-none absolute inset-0 bg-[linear-gradient(var(--grid-line)_1px,transparent_1px),linear-gradient(90deg,var(--grid-line)_1px,transparent_1px)] bg-[size:64px_64px]"
         aria-hidden
       />
       <div className="relative mx-auto max-w-3xl">

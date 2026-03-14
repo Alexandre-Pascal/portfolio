@@ -14,7 +14,7 @@ export function Footer() {
   return (
     <footer className="relative overflow-hidden border-t border-border bg-background-secondary">
       <div
-        className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(34,211,238,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(34,211,238,0.02)_1px,transparent_1px)] bg-[size:48px_48px]"
+        className="pointer-events-none absolute inset-0 bg-[linear-gradient(var(--grid-line)_1px,transparent_1px),linear-gradient(90deg,var(--grid-line)_1px,transparent_1px)] bg-[size:48px_48px]"
         aria-hidden
       />
       <div className="relative mx-auto max-w-6xl px-4 py-8 md:px-6">

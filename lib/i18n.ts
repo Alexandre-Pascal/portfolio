@@ -63,6 +63,8 @@ export const ui = {
       nav: "Navigation principale",
       openMenu: "Ouvrir le menu",
       closeMenu: "Fermer le menu",
+      themeToLight: "Passer en thème clair",
+      themeToDark: "Passer en thème sombre",
     },
   },
   en: {
@@ -127,6 +129,8 @@ export const ui = {
       nav: "Main navigation",
       openMenu: "Open menu",
       closeMenu: "Close menu",
+      themeToLight: "Switch to light theme",
+      themeToDark: "Switch to dark theme",
     },
   },
 } as const;

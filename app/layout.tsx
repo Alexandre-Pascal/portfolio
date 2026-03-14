@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Outfit, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { LocaleProvider } from "@/context/LocaleContext";
+import { ThemeProvider } from "@/context/ThemeContext";
 import { LocaleKeyWrapper } from "@/components/LocaleKeyWrapper";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -40,14 +41,21 @@ export default function RootLayout({
       <body
         className={`${outfit.variable} ${dmSans.variable} font-sans antialiased bg-background text-foreground min-h-screen`}
       >
-        <LocaleProvider>
-          <Header />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var t=localStorage.getItem("portfolio-theme");document.documentElement.setAttribute("data-theme",t==="dark"||t==="light"?t:"light");})();`,
+          }}
+        />
+        <ThemeProvider>
+          <LocaleProvider>
+            <Header />
           <main className="pt-16">
             <LocaleKeyWrapper>{children}</LocaleKeyWrapper>
           </main>
           <Footer />
           <ScrollToTop />
-        </LocaleProvider>
+          </LocaleProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

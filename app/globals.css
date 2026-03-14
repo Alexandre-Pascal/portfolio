@@ -1,7 +1,23 @@
 @import "tailwindcss";
 
-/* Palette thème sombre — portfolio futuriste */
-:root {
+/* Thème clair (défaut) */
+:root,
+[data-theme="light"] {
+  --background: #f8fafc;
+  --background-secondary: #f1f5f9;
+  --background-card: #ffffff;
+  --foreground: #0f172a;
+  --foreground-muted: #475569;
+  --accent: #0891b2;
+  --accent-hover: #0e7490;
+  --accent-secondary: #7c3aed;
+  --border: rgba(0, 0, 0, 0.08);
+  --glow: rgba(8, 145, 178, 0.25);
+  --grid-line: rgba(8, 145, 178, 0.03);
+}
+
+/* Thème sombre */
+[data-theme="dark"] {
   --background: #0a0a0f;
   --background-secondary: #12121a;
   --background-card: #1a1a24;
@@ -12,6 +28,7 @@
   --accent-secondary: #a78bfa;
   --border: rgba(255, 255, 255, 0.08);
   --glow: rgba(34, 211, 238, 0.4);
+  --grid-line: rgba(34, 211, 238, 0.03);
 }
 
 @theme inline {
