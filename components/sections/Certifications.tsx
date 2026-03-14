@@ -29,9 +29,13 @@ export function Certifications() {
   return (
     <section
       id="certifications"
-      className="scroll-mt-20 border-t border-border px-4 py-14 md:px-6 md:py-20"
+      className="relative scroll-mt-20 overflow-hidden border-t border-border px-4 py-14 md:px-6 md:py-20"
     >
-      <div className="mx-auto max-w-6xl">
+      <div
+        className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(34,211,238,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(34,211,238,0.025)_1px,transparent_1px)] bg-[size:64px_64px]"
+        aria-hidden
+      />
+      <div className="relative mx-auto max-w-6xl">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -40,6 +44,7 @@ export function Certifications() {
           className="font-heading text-3xl font-bold text-foreground md:text-4xl"
         >
           {t.sections.certifications}
+          <span className="mt-2 block h-0.5 w-16 rounded-full bg-gradient-to-r from-accent to-accent-secondary" />
         </motion.h2>
 
         <motion.ul
@@ -51,7 +56,7 @@ export function Certifications() {
         >
           {certifications.map((cert) => (
             <motion.li key={`${cert.name}-${cert.year}`} variants={item}>
-              <div className="block rounded-xl border border-border bg-background-card/50 px-6 py-4 transition-all hover:border-accent/40 hover:shadow-lg hover:shadow-accent/5">
+              <div className="block rounded-xl border border-border bg-background-card/50 px-6 py-4 transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_28px_rgba(34,211,238,0.1)]">
                 {cert.url ? (
                   <a
                     href={cert.url}

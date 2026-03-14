@@ -47,9 +47,13 @@ export function Projects() {
   return (
     <section
       id="projects"
-      className="scroll-mt-20 border-t border-border px-4 py-14 md:px-6 md:py-20"
+      className="relative scroll-mt-20 overflow-hidden border-t border-border px-4 py-14 md:px-6 md:py-20"
     >
-      <div className="mx-auto max-w-6xl">
+      <div
+        className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(34,211,238,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(34,211,238,0.03)_1px,transparent_1px)] bg-[size:64px_64px]"
+        aria-hidden
+      />
+      <div className="relative mx-auto max-w-6xl">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -58,6 +62,7 @@ export function Projects() {
           className="font-heading text-3xl font-bold text-foreground md:text-4xl"
         >
           {t.sections.projects}
+          <span className="mt-2 block h-0.5 w-16 rounded-full bg-gradient-to-r from-accent to-accent-secondary" />
         </motion.h2>
 
         <motion.div
@@ -69,10 +74,10 @@ export function Projects() {
           <button
             type="button"
             onClick={() => setActiveFilters([])}
-            className={`rounded-lg px-4 py-2 text-sm font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background ${
+            className={`rounded-xl px-4 py-2.5 text-sm font-medium transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background ${
               activeFilters.length === 0
-                ? "bg-accent text-background"
-                : "bg-background-secondary text-foreground-muted hover:bg-border hover:text-foreground"
+                ? "bg-accent text-background shadow-lg shadow-accent/25"
+                : "border border-border bg-background-card/80 text-foreground-muted hover:border-accent/30 hover:text-foreground"
             }`}
           >
             {t.projectCategories.all}
@@ -82,10 +87,10 @@ export function Projects() {
               key={cat}
               type="button"
               onClick={() => toggleFilter(cat)}
-              className={`rounded-lg px-4 py-2 text-sm font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background ${
+              className={`rounded-xl px-4 py-2.5 text-sm font-medium transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background ${
                 activeFilters.includes(cat)
-                  ? "bg-accent text-background"
-                  : "bg-background-secondary text-foreground-muted hover:bg-border hover:text-foreground"
+                  ? "bg-accent text-background shadow-lg shadow-accent/25"
+                  : "border border-border bg-background-card/80 text-foreground-muted hover:border-accent/30 hover:text-foreground"
               }`}
             >
               {t.projectCategories[cat]}
@@ -104,7 +109,7 @@ export function Projects() {
             <motion.article
               key={project.slug}
               variants={card}
-              className="group flex flex-col overflow-hidden rounded-xl border border-border bg-background-card transition-all duration-300 hover:scale-[1.02] hover:border-accent/40 hover:shadow-lg hover:shadow-accent/10"
+              className="group flex flex-col overflow-hidden rounded-xl border border-border bg-background-card transition-all duration-300 hover:scale-[1.02] hover:border-accent/50 hover:shadow-[0_0_40px_rgba(34,211,238,0.12)]"
             >
               <Link
                 href={`/projects/${project.slug}`}

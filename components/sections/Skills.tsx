@@ -27,9 +27,13 @@ export function Skills() {
   return (
     <section
       id="skills"
-      className="scroll-mt-20 border-t border-border bg-background-secondary/50 px-4 py-14 md:px-6 md:py-20"
+      className="relative scroll-mt-20 overflow-hidden border-t border-border bg-background-secondary/50 px-4 py-14 md:px-6 md:py-20"
     >
-      <div className="mx-auto max-w-6xl">
+      <div
+        className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(34,211,238,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(34,211,238,0.03)_1px,transparent_1px)] bg-[size:64px_64px]"
+        aria-hidden
+      />
+      <div className="relative mx-auto max-w-6xl">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -38,6 +42,7 @@ export function Skills() {
           className="font-heading text-3xl font-bold text-foreground md:text-4xl"
         >
           {t.sections.skills}
+          <span className="mt-2 block h-0.5 w-16 rounded-full bg-gradient-to-r from-accent to-accent-secondary" />
         </motion.h2>
 
         <motion.div
@@ -51,7 +56,7 @@ export function Skills() {
             <motion.div
               key={category.name}
               variants={item}
-              className="rounded-xl border border-border bg-background-card/50 p-6 transition-colors hover:border-accent/30"
+              className="rounded-xl border border-border bg-background-card/50 p-6 transition-all duration-300 hover:border-accent/40 hover:shadow-[0_0_28px_rgba(34,211,238,0.08)]"
             >
               <h3 className="font-heading text-lg font-semibold text-accent">
                 {category.name}

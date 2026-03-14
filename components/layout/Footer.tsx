@@ -12,8 +12,12 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-border bg-background-secondary">
-      <div className="mx-auto max-w-6xl px-4 py-8 md:px-6">
+    <footer className="relative overflow-hidden border-t border-border bg-background-secondary">
+      <div
+        className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(34,211,238,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(34,211,238,0.02)_1px,transparent_1px)] bg-[size:48px_48px]"
+        aria-hidden
+      />
+      <div className="relative mx-auto max-w-6xl px-4 py-8 md:px-6">
         <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
           <p className="text-sm text-foreground-muted">
             © {currentYear} — {t.footer.rights}

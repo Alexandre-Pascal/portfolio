@@ -50,8 +50,12 @@ export default function ProjectDetailPage() {
     : [project.description];
 
   return (
-    <article className="min-h-[60vh] px-4 py-20 md:px-6 md:py-28">
-      <div className="mx-auto max-w-3xl">
+    <article className="relative min-h-[60vh] overflow-hidden px-4 py-20 md:px-6 md:py-28">
+      <div
+        className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(34,211,238,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(34,211,238,0.025)_1px,transparent_1px)] bg-[size:64px_64px]"
+        aria-hidden
+      />
+      <div className="relative mx-auto max-w-3xl">
         <Link
           href="/#projects"
           className="mb-8 inline-flex items-center text-sm font-medium text-foreground-muted transition-colors hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
@@ -62,6 +66,7 @@ export default function ProjectDetailPage() {
         <header className="mb-10">
           <h1 className="font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
             {project.name}
+            <span className="mt-2 block h-0.5 w-16 rounded-full bg-gradient-to-r from-accent to-accent-secondary" />
           </h1>
           <p className="mt-4 text-lg leading-relaxed text-foreground-muted">
             {project.description}

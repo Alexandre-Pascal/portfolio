@@ -14,9 +14,13 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="scroll-mt-20 border-t border-border bg-background-secondary/50 px-4 py-14 md:px-6 md:py-20"
+      className="relative scroll-mt-20 overflow-hidden border-t border-border bg-background-secondary/50 px-4 py-14 md:px-6 md:py-20"
     >
-      <div className="mx-auto max-w-6xl">
+      <div
+        className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(34,211,238,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(34,211,238,0.03)_1px,transparent_1px)] bg-[size:64px_64px]"
+        aria-hidden
+      />
+      <div className="relative mx-auto max-w-6xl">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -25,6 +29,7 @@ export function Contact() {
           className="font-heading text-3xl font-bold text-foreground md:text-4xl"
         >
           {t.sections.contact}
+          <span className="mt-2 block h-0.5 w-16 rounded-full bg-gradient-to-r from-accent to-accent-secondary" />
         </motion.h2>
 
         <motion.div
@@ -32,12 +37,12 @@ export function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="mt-12 flex flex-col items-center rounded-2xl border border-border bg-background-card/50 p-8 text-center md:p-12"
+          className="mt-12 flex flex-col items-center rounded-2xl border border-accent/20 bg-background-card/80 p-8 text-center shadow-[0_0_0_1px_rgba(34,211,238,0.05),inset_0_1px_0_0_rgba(255,255,255,0.03)] md:p-12"
         >
           <p className="text-lg text-foreground-muted">{t.contact.intro}</p>
           <a
             href={`mailto:${contact.email}`}
-            className="mt-6 inline-flex h-12 items-center justify-center rounded-lg bg-accent px-8 font-semibold text-background shadow-lg shadow-accent/25 transition-all hover:bg-accent-hover hover:shadow-accent/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+            className="mt-6 inline-flex h-12 items-center justify-center rounded-xl bg-accent px-8 font-semibold text-background shadow-lg shadow-accent/30 transition-all duration-300 hover:bg-accent-hover hover:shadow-accent/40 hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
             {contact.email}
           </a>

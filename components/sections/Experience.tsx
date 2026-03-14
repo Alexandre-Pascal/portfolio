@@ -27,9 +27,13 @@ export function Experience() {
   return (
     <section
       id="experience"
-      className="scroll-mt-20 border-t border-border bg-background-secondary/50 px-4 py-14 md:px-6 md:py-20"
+      className="relative scroll-mt-20 overflow-hidden border-t border-border bg-background-secondary/50 px-4 py-14 md:px-6 md:py-20"
     >
-      <div className="mx-auto max-w-6xl">
+      <div
+        className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(167,139,250,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(167,139,250,0.03)_1px,transparent_1px)] bg-[size:64px_64px]"
+        aria-hidden
+      />
+      <div className="relative mx-auto max-w-6xl">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -38,6 +42,7 @@ export function Experience() {
           className="font-heading text-3xl font-bold text-foreground md:text-4xl"
         >
           {t.sections.experience}
+          <span className="mt-2 block h-0.5 w-16 rounded-full bg-gradient-to-r from-accent-secondary to-accent" />
         </motion.h2>
 
         <motion.div
@@ -49,7 +54,7 @@ export function Experience() {
         >
           <div className="relative pl-6 md:pl-8">
             <div
-              className="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-accent-secondary via-border to-transparent"
+              className="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-accent-secondary via-accent-secondary/50 to-transparent shadow-[0_0_12px_rgba(167,139,250,0.25)]"
               aria-hidden
             />
             {experience.map((exp) => (
@@ -58,8 +63,8 @@ export function Experience() {
                 variants={item}
                 className="relative pb-12 last:pb-0"
               >
-                <div className="absolute left-0 top-1.5 h-2.5 w-2.5 -translate-x-1/2 rounded-full border-2 border-accent-secondary bg-background" />
-                <div className="rounded-xl border border-border bg-background-card/50 p-6 transition-colors hover:border-accent-secondary/30 md:p-6">
+                <div className="absolute left-0 top-1.5 h-3 w-3 -translate-x-1/2 rounded-full border-2 border-accent-secondary bg-background shadow-[0_0_10px_rgba(167,139,250,0.4)]" />
+                <div className="rounded-xl border border-border bg-background-card/50 p-6 transition-all duration-300 hover:border-accent-secondary/40 hover:shadow-[0_0_28px_rgba(167,139,250,0.08)] md:p-6">
                   <div className="flex flex-wrap items-baseline justify-between gap-2">
                     <h3 className="font-heading text-lg font-semibold text-foreground">
                       {exp.role}
