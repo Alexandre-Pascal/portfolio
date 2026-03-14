@@ -61,6 +61,7 @@ export function Header() {
       >
         <Link
           href="/#hero"
+          onClick={(e) => handleNavLinkClick(e, "hero")}
           className="font-heading text-lg font-semibold text-foreground transition-colors hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
         >
           Portfolio
