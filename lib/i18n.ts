@@ -15,6 +15,7 @@ export const ui = {
     hero: {
       viewPortfolio: "Voir le portfolio",
       contactMe: "Me contacter",
+      downloadCv: "Télécharger mon CV",
     },
     sections: {
       about: "À propos",
@@ -78,6 +79,7 @@ export const ui = {
     hero: {
       viewPortfolio: "View portfolio",
       contactMe: "Contact me",
+      downloadCv: "Download my CV",
     },
     sections: {
       about: "About",
