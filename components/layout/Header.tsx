@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { useScrollSpy } from "@/hooks/useScrollSpy";
@@ -38,6 +39,17 @@ export function Header() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
 
   const handleNavClick = () => setMobileOpen(false);
 
@@ -224,36 +236,41 @@ export function Header() {
         </div>
       </nav>
 
-      <AnimatePresence>
-        {mobileOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-0 top-16 z-40 bg-background/95 backdrop-blur-md md:hidden"
-            aria-hidden="true"
-          >
-            <ul className="flex flex-col gap-1 px-4 py-6">
-              {navItems.map(({ id, label }) => (
-                <li key={id}>
-                  <Link
-                    href={`/#${id}`}
-                    className={`block rounded-lg px-4 py-3 text-base font-medium transition-colors ${
-                      activeId === id
-                        ? "bg-background-card text-accent"
-                        : "text-foreground hover:bg-background-card hover:text-accent"
-                    }`}
-                    onClick={(e) => handleNavLinkClick(e, id)}
-                  >
-                    {label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
+      {typeof document !== "undefined" &&
+        createPortal(
+          <AnimatePresence>
+            {mobileOpen && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.2 }}
+                className="fixed inset-0 top-16 z-40 min-h-[100dvh] bg-background md:hidden"
+                style={{ height: "calc(100dvh - 4rem)" }}
+                aria-hidden="true"
+              >
+                <ul className="flex flex-col gap-1 px-4 py-6">
+                  {navItems.map(({ id, label }) => (
+                    <li key={id}>
+                      <Link
+                        href={`/#${id}`}
+                        className={`block rounded-lg px-4 py-3 text-base font-medium transition-colors ${
+                          activeId === id
+                            ? "bg-background-card text-accent"
+                            : "text-foreground hover:bg-background-card hover:text-accent"
+                        }`}
+                        onClick={(e) => handleNavLinkClick(e, id)}
+                      >
+                        {label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            )}
+          </AnimatePresence>,
+          document.body
         )}
-      </AnimatePresence>
     </header>
   );
 }
