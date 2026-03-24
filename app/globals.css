@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* Thème clair (défaut) */
+/* Thème clair */
 :root,
 [data-theme="light"] {
   --background: #f8fafc;

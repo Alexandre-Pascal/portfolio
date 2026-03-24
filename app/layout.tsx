@@ -37,13 +37,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" suppressHydrationWarning>
+    <html lang="fr" data-theme="dark" suppressHydrationWarning>
       <body
         className={`${outfit.variable} ${dmSans.variable} font-sans antialiased bg-background text-foreground min-h-screen`}
       >
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){var t=localStorage.getItem("portfolio-theme");document.documentElement.setAttribute("data-theme",t==="dark"||t==="light"?t:"light");})();`,
+            __html: `(function(){var t=localStorage.getItem("portfolio-theme");document.documentElement.setAttribute("data-theme",t==="dark"||t==="light"?t:"dark");})();`,
           }}
         />
         <ThemeProvider>
