@@ -86,12 +86,14 @@ export function Header() {
                 <Link
                   href={`/#${id}`}
                   className={`relative py-2 text-sm font-medium transition-colors hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background ${
-                    activeId === id ? "text-accent" : "text-foreground-muted"
+                    activeId != null && activeId === id
+                      ? "text-accent"
+                      : "text-foreground-muted"
                   }`}
                   onClick={(e) => handleNavLinkClick(e, id)}
                 >
                   {label}
-                  {activeId === id && (
+                  {activeId != null && activeId === id && (
                     <motion.span
                       layoutId="nav-indicator"
                       className="absolute bottom-0 left-0 right-0 h-0.5 bg-accent"
@@ -255,7 +257,7 @@ export function Header() {
                       <Link
                         href={`/#${id}`}
                         className={`block rounded-lg px-4 py-3 text-base font-medium transition-colors ${
-                          activeId === id
+                          activeId != null && activeId === id
                             ? "bg-background-card text-accent"
                             : "text-foreground hover:bg-background-card hover:text-accent"
                         }`}

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import type { SectionId } from "@/lib/data";
 
 const sectionIds: SectionId[] = [
@@ -14,10 +15,18 @@ const sectionIds: SectionId[] = [
   "contact",
 ];
 
-export function useScrollSpy(): SectionId {
-  const [activeId, setActiveId] = useState<SectionId>("hero");
+export function useScrollSpy(): SectionId | null {
+  const pathname = usePathname();
+  const [activeId, setActiveId] = useState<SectionId | null>(null);
 
   useEffect(() => {
+    if (pathname !== "/") {
+      setActiveId(null);
+      return;
+    }
+
+    setActiveId("hero");
+
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
@@ -40,7 +49,7 @@ export function useScrollSpy(): SectionId {
     });
 
     return () => observer.disconnect();
-  }, []);
+  }, [pathname]);
 
   return activeId;
 }
