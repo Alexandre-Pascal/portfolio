@@ -89,6 +89,8 @@ export interface ContactInfo {
   phone?: string;
   linkedin?: string;
   github?: string;
+  /** URL du portfolio en ligne (ex. CV PDF) */
+  portfolio?: string;
   otherLinks?: { label: string; url: string }[];
 }
 
@@ -705,6 +707,7 @@ const dataFr: PortfolioData = {
     email: "alexandre.pascal.ep@gmail.com",
     linkedin: "https://www.linkedin.com/in/alexandre-pascal-69a63524b/",
     github: "https://github.com/Alexandre-Pascal",
+    portfolio: "https://portfolio-alexandre-pascal.vercel.app",
   },
 };
 
@@ -1302,6 +1305,7 @@ const dataEn: PortfolioData = {
     email: "alexandre.pascal.ep@gmail.com",
     linkedin: "https://www.linkedin.com/in/alexandre-pascal-69a63524b/",
     github: "https://github.com/Alexandre-Pascal",
+    portfolio: "https://portfolio-alexandre-pascal.vercel.app",
   },
 };
 

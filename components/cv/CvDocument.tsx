@@ -227,26 +227,39 @@ export function CvDocument({
               </Link>
             )}
             {contact.email &&
-              (contact.phone || contact.linkedin || contact.github) && (
+              (contact.phone ||
+                contact.linkedin ||
+                contact.github ||
+                contact.portfolio) && (
                 <Text style={styles.contactSep}>|</Text>
               )}
             {contact.phone && (
               <Text style={styles.contactItem}>{contact.phone}</Text>
             )}
-            {contact.phone && (contact.linkedin || contact.github) && (
-              <Text style={styles.contactSep}>|</Text>
-            )}
+            {contact.phone &&
+              (contact.linkedin || contact.github || contact.portfolio) && (
+                <Text style={styles.contactSep}>|</Text>
+              )}
             {contact.linkedin && (
               <Link src={contact.linkedin} style={styles.contactItem}>
                 LinkedIn
               </Link>
             )}
-            {contact.linkedin && contact.github && (
-              <Text style={styles.contactSep}>|</Text>
-            )}
+            {contact.linkedin &&
+              (contact.github || contact.portfolio) && (
+                <Text style={styles.contactSep}>|</Text>
+              )}
             {contact.github && (
               <Link src={contact.github} style={styles.contactItem}>
                 GitHub
+              </Link>
+            )}
+            {contact.github && contact.portfolio && (
+              <Text style={styles.contactSep}>|</Text>
+            )}
+            {contact.portfolio && (
+              <Link src={contact.portfolio} style={styles.contactItem}>
+                Portfolio
               </Link>
             )}
           </View>
