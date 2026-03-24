@@ -55,13 +55,19 @@ export const snowledgeContent: { fr: SnowledgeContent; en: SnowledgeContent } =
         imagePath: "/images/projects/snowledge/snowledge-09.png",
       },
       keyFigures: [
-        { label: "Commits sur main", value: "~1 630" },
-        { label: "Période", value: "1 an" },
         {
-          label: "Plateformes intégrées",
-          value: "3 (Discord, YouTube, WhatsApp)",
+          value: "3",
+          label: "Plateformes intégrées (Discord, YouTube, WhatsApp)",
         },
-        { label: "Stack principale", value: "NestJS, Next.js 15, GCP" },
+        { value: "1 an", label: "Période active sur le produit" },
+        {
+          value: "IA",
+          label: "Analyses LLM, digests globaux, jobs planifiés",
+        },
+        {
+          value: "NestJS · Next.js · GCP",
+          label: "Stack technique principale",
+        },
       ],
       timeline: [
         {
@@ -189,13 +195,19 @@ export const snowledgeContent: { fr: SnowledgeContent; en: SnowledgeContent } =
         imagePath: "/images/projects/snowledge/snowledge-09.png",
       },
       keyFigures: [
-        { label: "Commits on main", value: "~1,630" },
-        { label: "Period", value: "1 year" },
         {
-          label: "Integrated platforms",
-          value: "3 (Discord, YouTube, WhatsApp)",
+          value: "3",
+          label: "Integrated platforms (Discord, YouTube, WhatsApp)",
         },
-        { label: "Core stack", value: "NestJS, Next.js 15, GCP" },
+        { value: "1 year", label: "Active product development period" },
+        {
+          value: "AI",
+          label: "LLM analysis, global digests, scheduled jobs",
+        },
+        {
+          value: "NestJS · Next.js · GCP",
+          label: "Main technical stack",
+        },
       ],
       timeline: [
         {

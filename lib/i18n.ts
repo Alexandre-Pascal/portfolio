@@ -42,7 +42,7 @@ export const ui = {
       backToProjects: "Retour aux projets",
       viewProject: "Voir le projet",
       snowledge: {
-        keyFigures: "Chiffres clés",
+        keyFigures: "Points clés",
         timeline: "Évolution du projet",
         myContributions: "Ce que j'ai réalisé",
         stack: "Stack technique",
@@ -108,7 +108,7 @@ export const ui = {
       backToProjects: "Back to projects",
       viewProject: "View project",
       snowledge: {
-        keyFigures: "Key figures",
+        keyFigures: "Key highlights",
         timeline: "Project timeline",
         myContributions: "What I delivered",
         stack: "Tech stack",
