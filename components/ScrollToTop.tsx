@@ -18,7 +18,12 @@ export function ScrollToTop() {
   }, []);
 
   const scrollToTop = () => {
-    document.getElementById("hero")?.scrollIntoView({ behavior: "smooth" });
+    const hero = document.getElementById("hero");
+    if (hero) {
+      hero.scrollIntoView({ behavior: "smooth" });
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
   };
 
   if (!visible) return null;
