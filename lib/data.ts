@@ -138,7 +138,6 @@ const dataFr: PortfolioData = {
       city: "Decazeville",
       startYear: 2018,
       endYear: 2021,
-      mention: "Assez Bien",
     },
   ],
   experience: [
@@ -743,7 +742,6 @@ const dataEn: PortfolioData = {
       city: "Decazeville",
       startYear: 2018,
       endYear: 2021,
-      mention: "Good standing",
     },
   ],
   experience: [
