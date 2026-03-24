@@ -284,6 +284,15 @@ export function CvDocument({
         </View>
 
         <View style={styles.section}>
+          <Text style={styles.sectionTitle}>{t.certifications}</Text>
+          {certifications.map((cert, i) => (
+            <Text key={i} style={styles.certLine}>
+              {cert.name} — {cert.issuer} ({cert.year})
+            </Text>
+          ))}
+        </View>
+
+        <View style={styles.section}>
           <Text style={styles.sectionTitle}>{t.experience}</Text>
           {experience.map((exp, i) => (
             <View key={i} style={styles.expRow}>
@@ -328,15 +337,6 @@ export function CvDocument({
                 {cat.items.map((item) => item.name).join(", ")}
               </Text>
             </View>
-          ))}
-        </View>
-
-        <View style={styles.section}>
-          <Text style={styles.sectionTitle}>{t.certifications}</Text>
-          {certifications.map((cert, i) => (
-            <Text key={i} style={styles.certLine}>
-              {cert.name} — {cert.issuer} ({cert.year})
-            </Text>
           ))}
         </View>
       </Page>
