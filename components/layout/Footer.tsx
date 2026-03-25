@@ -43,6 +43,14 @@ export function Footer() {
                 GitHub
               </a>
             )}
+            {data.contact.phone && (
+              <a
+                href={`tel:${data.contact.phone.replace(/\s/g, "")}`}
+                className="text-sm font-medium text-foreground-muted transition-colors hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              >
+                {data.contact.phone}
+              </a>
+            )}
             <Link
               href="/#contact"
               className="text-sm font-medium text-foreground-muted transition-colors hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"

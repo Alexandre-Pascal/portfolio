@@ -48,7 +48,7 @@ export function Contact() {
           </a>
           {contact.phone && (
             <a
-              href={`tel:${contact.phone}`}
+              href={`tel:${contact.phone.replace(/\s/g, "")}`}
               className="mt-4 text-foreground-muted transition-colors hover:text-accent"
             >
               {contact.phone}

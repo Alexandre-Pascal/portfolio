@@ -705,6 +705,7 @@ const dataFr: PortfolioData = {
   ],
   contact: {
     email: "alexandre.pascal.ep@gmail.com",
+    phone: "07 83 38 28 68",
     linkedin: "https://www.linkedin.com/in/alexandre-pascal-69a63524b/",
     github: "https://github.com/Alexandre-Pascal",
     portfolio: "https://portfolio-alexandre-pascal.vercel.app",
@@ -1303,6 +1304,7 @@ const dataEn: PortfolioData = {
   ],
   contact: {
     email: "alexandre.pascal.ep@gmail.com",
+    phone: "+33783382868",
     linkedin: "https://www.linkedin.com/in/alexandre-pascal-69a63524b/",
     github: "https://github.com/Alexandre-Pascal",
     portfolio: "https://portfolio-alexandre-pascal.vercel.app",
